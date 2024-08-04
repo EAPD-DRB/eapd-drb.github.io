@@ -1,219 +1,364 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="640">
+<head>
+  <meta charset="utf-8">
 
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/header.css">
-    <link rel="stylesheet" href="/stylesheets/nav.css">
-    <link rel="stylesheet" href="/stylesheets/main.css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="640">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/header.css">
+  <link rel="stylesheet" href="/stylesheets/nav.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css">
 
-    <title>UN Modelling Tools</title>
-  </head>
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
 
-  <body>
-    <header>
-  <a id="title" href="/">
-    Modelling&nbsp;Tools
-    <br>
-    <div id="for-sustainable-development">for&nbsp;sustainable&nbsp;development</div>
-  </a>
+  <title>Training information and links</title>
+</head>
 
-  <div id="logos">
-    <a href="http://www.undp.org/">
-      <img src="/images/logos/undp.svg"
-           alt="UNDP Logo">
+<body>
+  <header>
+    <a id="title" href="/">
+      Rebuilding&nbsp;Better&nbsp;and&nbsp;Greener
+      <br>
+      <div id="using-policy-simulation-tools">Using&nbsp;Policy&nbsp;Simulation&nbsp;Tools</div>
     </a>
-    <a href="https://www.un.org/development/desa/en/">
-      <img src="/images/logos/undesa.png"
-           alt="UNDESA Logo">
-    </a>
-  </div>
-</header>
+
+    <div id="logos">
+      <a href="https://www.un.org/development/desa/en/">
+        <img src="/images/logos/undesa.png" alt="UNDESA Logo">
+      </a>
+    </div>
+  </header>
 
 
-    <nav>
-  <input id="toggle"
-         class="no-desktop"
-         type="checkbox">
+  <nav>
+    <input id="toggle" class="no-desktop" type="checkbox">
 
-  <div class="no-desktop">
-    <label for="toggle">
-      <svg style="width:28px;height:28px" viewBox="0 0 24 18">
-        <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-      </svg>
-    </label>
-  </div>
+    <div class="no-desktop">
+      <label for="toggle">
+        <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+          <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+    </div>
 
-  <a href="/about"
-     class="toggleable">About</a>
+    <a href="/about" class="toggleable">About the Project</a>
 
-  <a href="/modelling-tools"
-     class="toggleable">Modelling Tools</a>
+    <a href="/og-model" class="toggleable">OG Country Projects</a>
 
-  <a href="/country-projects"
-     class="toggleable">Country Projects</a>
+    <a href="/clews-model" class="toggleable">CLEWs Country Projects</a>
 
-  <a href="/outreach-training"
-     class="toggleable">Outreach Training</a>
+    <a href="/wefm-model" class="toggleable">WEFM Country Projects</a>
 
-  <a href="/news-events"
-     class="toggleable">News and Events</a>
+    <a href="/news-events" class="toggleable">News and Events</a>
 
-  <script>
-    (function() {
-    var as = document.querySelectorAll('body > nav a');
-    var path = location.pathname;
+    <script>
+      (function () {
+        var as = document.querySelectorAll('body > nav a');
+        var path = location.pathname;
 
-    for (var a of as) {
-      var regex = new RegExp(`${a.pathname}`);
+        for (var a of as) {
+          var regex = new RegExp(`${a.pathname}`);
 
-      if (!a.href.match('#') && path.match(regex)) {
-        a.classList.add('active');
-        break;
-      }
-    }})();
-  </script>
-</nav>
+          if (!a.href.match('#') && path.match(regex)) {
+            a.classList.add('active');
+            break;
+          }
+        }
+      })();
+    </script>
+  </nav>
 
 
-    <main>
-<!-- CONTENT-STARTS -->
-<style>
-  ul { padding-left: 3em; }
-</style>
+  <main>
+    <!-- CONTENT-STARTS -->
+    <link rel="stylesheet" href="/stylesheets/modelling-tools.css">
 
-<section class="banner"
-         style="background-image: url(/images/photos/roads-farms.jpg);
+    <nav class="no-mobile">
+      <a href="#clews">CLEWS</a>
+      <a href="#economy-models">Economy-wide Models</a>
+      <a href="#socioeconomic">Socioeconomic</a>
+      <a href="#energy-systems">Energy Systems</a>
+      <a href="#geo-electricity">Geo-spatial Electrification</a>
+    </nav>
+
+    <section class="banner" style="background-image: url(/images/photos/beans.jpg);
+                margin-top: 0em;
+                margin-bottom: 2em;
                 min-height: 500px;">
-</section>
+    </section>
 
-<section>
-  <h1>The Outreach Training Course</h1>
+    <section>
+      <h1>Modelling Tools for Sustainable Development</h1>
 
-  <p>The outreach training course introduces modelling tools that support integrated policymaking for sustainable development.</p>
+      <p>Five quantitative modelling tools are being used by UNDESA and UNDP to help countries assess sustainable
+        development policy options.</p>
 
-  <p>Designed for policymakers and development practitioners, the course offers a practical guide on how the tools can best inform policy debates and decisions. It does not provide quantitative modelling skills, a task better accomplished by in-depth capacity development assistance or specialized academic courses. </p>
+      <ul>
+        <li>The Climate, Land-use, Energy and Water Systems analysis and model (CLEWS)</li>
+        <li>Economy-wide models</li>
+        <li>Socioeconomic microsimulations</li>
+        <li>Energy systems models</li>
+        <li>Geo-spatial electrification access modelling</li>
+      </ul>
 
-  <p>Building on a suite of modelling tools developed over several years, the course was designed by UNDESA, UNDP and other partners. A series of modules presents each tool, offering a non-technical overview of major elements, illustrations of results and policy insights, and hands-on exercises to reinforce learning.</p>
+      <p>The tools use, to the extent possible, open source software and state-of-the-art knowledge. Continuous
+        development and improvement, backed by a global community of experts, spurs innovation and overcomes challenges.
+      </p>
+    </section>
 
-  <p>Modules can be used in a workshop or classroom, or for individual review. Each module consists of: </p>
+    <section id="clews">
+      <h1>The Climate, Land-use, Energy and Water systems (CLEWS)</h1>
 
-  <ul>
-    <li>Learning guide: presents the objectives and contents of the module</li>
-    <li>Reader: full reading material</li>
-    <li>Presentations: meant for facilitators and instructors in a workshop, or for individuals who want a fast review of the module</li>
-    <li>Exercises: guides for hands-on sessions and/or group discussions</li>
-  </ul>
-</section>
+      <p>Climate, land-use, energy and water systems (CLEWS) models are tools for simultaneous consideration of food,
+        energy and water security. They are designed to assess how production and use of these resources may contribute
+        to climate change, and how climate change may affect resource systems.</p>
 
-<section>
-  <h1>Modules</h1>
+      <p>By comparing different technologies and value chains, the model can identify pressure points, and indicate
+        synergies and trade-offs to reach development goals. CLEWS can analyse policy decisions on issues such as the
+        promotion of clean energy, competition for water and agricultural modernization.</p>
 
-  <article>
-    <h3>Module 1 - The 2030 Agenda</h3>
+      <div class="projects">
+        <div class="t-col" style="background-image: url(/images/photos/clews-mauritius.jpg)">
+          <div class="fuzz"></div>
+          <h3>CLEWS Mauritius</h3>
 
-    <p>The 2030 Agenda module looks at designing integrated policies to achieve sustainable development and the overall contributions of modelling.</p>
+          <div class="t-gutter">
+            <a href="https://un-modelling.github.io/clews-mauritius-presentation">Visualisation</a>
+          </div>
+        </div>
 
-    <ul>
-      <li><a href="/documents/module-1/1. 2030 Agenda - The Learning Guide.pdf">Learning Guide</a></li>
-      <li><a href="/documents/module-1/2. 2030 Agenda - Reader.pdf">Reader</a></li>
-      <li><a href="/documents/module-1/3. 2030 Agenda - Presentation.pptx">Presentation</a></li>
-      <li><a href="/documents/module-1/3.1. 2030 Agenda - Group Discussion.pdf">Group Discussion</a></li>
-    </ul>
-  </article>
+        <div class="t-col" style="background-image: url(/images/photos/fields.jpg)">
+          <div class="fuzz"></div>
+          <h3>CLEWS Global</h3>
 
-  <article>
-    <h3>Module 2 - CLEWS Country</h3>
+          <div class="t-gutter">
+            <a onclick="_show_aside(this);">About</a>
 
-    <p>The CLEWS country module examines the simultaneous effects of selected sustainable development policies on water and land use, energy costs and investments, emissions and other issues.</p>
+            <a
+              href="https://unite.un.org/sites/unite.un.org/files/app-globalclews-v-1-0/landingpage.html">Visualisation</a>
+          </div>
 
-    <ul>
-      <li><a href="/documents/module-2/1. CLEWS Country - Learning Guide.pdf">Learning Guide</a></li>
-      <li><a href="/documents/module-2/2. CLEWS Country - Reader.pdf">Reader</a></li>
-      <li><a href="/documents/module-2/3.1 CLEWS Country - Presentation 1.pptx">Presentation 1</a></li>
-      <li><a href="/documents/module-2/3.2 CLEWS Country - Presentation 2.pptx">Presentation 2</a></li>
-      <li><a href="/documents/module-2/3.3 CLEWS Country - Presentation 3.pptx">Presentation 3</a></li>
-      <li><a href="/documents/module-2/3.4 CLEWS Country - Presentation 4.pptx">Presentation 4</a></li>
-      <li><a href="/documents/module-2/3 CLEWS5_Hands-On Session.pdf">Hands-On Session</a></li>
-    </ul>
-  </article>
+          <aside>
+            <div class="content">
+              <p>The Global CLEWS model provides useful insights about the relationships among water, energy, climate,
+                and land and material use at the global scale. It was developed to inform Rio+20 discussions and will
+                soon be upgraded to provide useful insights about the interlinkages among climate, land, materials,
+                energy and water underlying the relationships among many of the Sustainable Development Goals (SDGs).
+                The challenge of progressing towards the SDGs is best approached taking into account synergies and
+                trade-offs among them.</p>
 
-  <article>
-    <h3>Module 3 - CLEWS Global</h3>
+              <p>Supplementary material is available <a href="https://github.com/un-modelling/clews-global">here</a>.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-    <p>The CLEWS global module helps ground national sustainable development policies in understanding of the impact of selected global policies on varying emissions paths, water and land use patterns, and energy costs and investments.</p>
+    <section id="economy-models">
+      <h1>Economy-wide models</h1>
 
-    <ul>
-      <li><a href="/documents/module-3/1. Global CLEWS - Learning Guide.pdf">Learning Guide</a></li>
-      <li><a href="/documents/module-3/2. Global CLEWS - Reader.pdf">Reader</a></li>
-      <li><a href="/documents/module-3/3.1.a  Global CLEWS - Group Discussion A.pdf">Group Discussion A</a></li>
-      <li><a href="/documents/module-3/3.2.a. Global CLEWS Group - Discussion B.pdf">Discussion B</a></li>
-      <li><a href="/documents/module-3/3.1. GLOBAL CLEWS - Presentation.pptx">Presentation</a></li>
-      <li><a href="/documents/module-3/3.2. Global CLEWS - Hands-On Exercise.pptx">Hands-On Exercise</a></li>
-    </ul>
-  </article>
+      <p>Economy-wide models are useful to assess “what-if” scenarios involving a variety of policies and shocks. They
+        can shed light on the impacts of policies and shocks on employment, output, national budgets, imports and
+        exports, and consumption patterns, among others.</p>
 
-  <article>
-    <h3>Module 4 - Universal Access to Electricity</h3>
+      <p>Examples of policies assessed by the models include: increasing investments in education and health,
+        investments in infrastructure, introduction of fuel or carbon taxes, and emissions cap regulations.</p>
 
-    <p>The universal access to electricity module illustrates how geospatial information can help identify low-cost strategies to provide universal access to electricity under different cost and consumption scenarios.</p>
+      <div class="projects">
+        <div class="t-col" style="background-image: url(/images/photos/tax-fuel-development.jpg)">
+          <div class="fuzz"></div>
+          <h3>Fuel Tax & Development</h3>
 
-    <ul>
-      <li><a href="/documents/module-4/1. Universal Access to Electricity - Learning Guide.pdf">Learning Guide</a></li>
-      <li><a href="/documents/module-4/2. Universal Access to Electricity - Reader.pdf">Reader</a></li>
-      <li><a href="/documents/module-4/3.1 Universal Access to Electricity - Presentation 1.pptx">Presentation 1</a></li>
-      <li><a href="/documents/module-4/3.2 Universal Access to Electricity - Presentation 2.pptx">Presentation 2</a></li>
-      <li><a href="/documents/module-4/3.3.a. Universal Access to Electrificity - Hands-On Exercise.pdf">Hands-On Exercise</a></li>
-      <li><a href="/documents/module-4/3.3 Universal Access to Electricity Presentation 3.pptx">Presentation 3</a></li>
-    </ul>
-  </article>
+          <div class="t-gutter">
+            <a onclick="_show_aside(this);">About</a>
 
-  <article>
-    <h3>Module 5 - Energy Systems</h3>
+            <a href="https://un-modelling.github.io/tax-fuel-development-presentation/">Visualisation</a>
+          </div>
 
-    <p>The energy systems module sheds light on the technical, economic and environmental challenges involved in steering national electrical systems towards a sustainable path.</p>
+          <aside>
+            <div class="content">
+              <p>The fuel tax and development visualization looks into the trade-offs and synergies for sustainable
+                development from imposing a fuel tax. Using an energy tax as a proxy, the model considers impacts that
+                hinge on how newly generated revenue is spent or recycled back into the economy. For example, tax
+                revenues may feed into a simple expansion of the overall government budget, or go towards expenditures
+                in education or infrastructure investment. The illustration presents three country cases.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-    <ul>
-      <li><a href="/documents/module-5/1. Energy Systems - Learning Guide.pdf">Learning Guide</a></li>
-      <li><a href="/documents/module-5/2. Energy Systems - Reader.pdf">Reader</a></li>
-      <li><a href="/documents/module-5/3.1 Energy Systems - Presentation 1.pptx">Presentation 1</a></li>
-      <li><a href="/documents/module-5/3.2 Energy Systems - Presentation 2.pptx">Presentation 2</a></li>
-      <li><a href="/documents/module-5/3.3.a. Energy systems - Hands-on Exercises.pdf">Hands-On Exercise</a></li>
-      <li><a href="/documents/module-5/3.3.b_Data_file_UGA_exercise.xlsx">Data File - UGA exercise</a></li>
-      <li><a href="/documents/module-5/3.3 Energy Systems - Presentation 3.pptx">Presentation 3</a></li>
-    </ul>
-  </article>
-</section>
+    <section id="socioeconomic">
+      <h1>Socioeconomic Microsimulations</h1>
 
-<!-- CONTENT-ENDS -->
-    </main>
+      <p>Understanding how households and individuals experience policy choices and potential shocks is key to ensuring
+        that benefits are inclusive and no one is left behind. Microsimulations offer insights for policies to eradicate
+        poverty, reduce inequality, enhance food security and broaden access to energy, among others. The technique has
+        been applied to policies related to taxes or subsidies, cash or in-kind transfers, and expanded access to modern
+        energy, among other examples.</p>
 
-    <footer>
-  <div class="t-col">
-    <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
-  </div>
+      <div class="projects">
+        <div class="t-col" style="background-image: url(/images/photos/kids-walking.jpg)">
+          <div class="fuzz"></div>
+          <h3>Growth and Social Inclusion</h3>
 
-  <div class="t-col">
-    <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
-  </div>
+          <div class="t-gutter">
+            <a onclick="_show_aside(this);">About</a>
+            <a href="/tada?project=growth-social-inclusion">Visualisation</a>
+          </div>
 
-  <div class="t-col">
-    <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
-  </div>
+          <aside>
+            <div class="content">
+              <p>This analysis combines two modelling tools, an economy-wide model and microsimulation.
+              <ul>
+                <li>The economy-wide model analyses the effects of rapid growth and different financing options in
+                  implementing education, health and sanitation policies. Model simulations suggest that economic growth
+                  greatly facilitates the achievement of education, health and sanitation goals. The analysis also
+                  suggests, however, that in the absence of fast economic growth, the financial burden of implementing
+                  these policies increases dramatically.</li>
+                <li>The microsimulation exercise analyses the impact of macroeconomic shocks on household income,
+                  notably labour income. This generates a mapping of the effects of implementing health, education and
+                  sanitation policies on poverty and income distribution for a number of key household groups.</li>
+              </ul>
+              </p>
+            </div>
+          </aside>
+        </div>
 
-  <div class="t-col">
-    <a href="mailto:unmodellingtools@undp.org">Contact</a>
-  </div>
-</footer>
+        <div class="t-col" style="background-image: url(/images/photos/electricity-poles.jpg)">
+          <div class="fuzz"></div>
+          <h3>Estimating Electricity Consumption Using HH Surveys</h3>
 
-  </body>
+          <div class="t-gutter">
+            <a onclick="_show_aside(this);">About</a>
+          </div>
+
+          <aside>
+            <div class="content">
+              <p>Estimating the demand for electricity is a critical step in the design of a medium- to long-term energy
+                plan. Frequently, estimates are based on time series data with few observation points or on data from
+                other countries or regions. Even if data exist over a number of years and for detailed energy services,
+                estimates often cannot easily take into account changes in policies.</p>
+              <p>Microsimulation models shed light on how the demand for energy can change under “what-if” scenarios.
+                Based on household surveys or administrative data, microsimulation can estimate energy demand for the
+                entire distribution of households or beneficiaries, and thereby offer some evidence of how, for example,
+                redistributive policies can affect the overall demand for energy.</p>
+
+              <p>Supplementary material is available <a
+                  href="https://github.com/un-modelling/Electricity_Consumption_Surveys">here</a>.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="energy-systems">
+      <h1>Energy Systems Models</h1>
+
+      <p>Energy systems models can be used for energy policy analysis or to conduct medium- and long-term energy
+        planning. They can help assess the interplay between the technical and economic characteristics of energy
+        technologies, and explore how technology choice impacts energy security, access and affordability, as well as
+        the environment.</p>
+
+      <div class="projects">
+        <div class="t-col" style="background-image: url(/images/photos/integrated-systems-analysis.jpg)">
+          <div class="fuzz"></div>
+          <h3>Energy Systems Analysis</h3>
+
+          <div class="t-gutter">
+            <a onclick="_show_aside(this);">About</a>
+            <a href="https://unite.un.org/sites/unite.un.org/files/app-desa-atlantis/index.html">Visualisation</a>
+          </div>
+
+          <aside>
+            <div class="content">
+              <p>The case study was developed by KTH-DESA to illustrate the basic features of energy systems modelling
+                by using OSeMOSYS, the open source energy modelling system, and its interface MoManI. This exercise uses
+                data for a fictitious country, called Atlantis, that shares features of both a developing and a
+                developed countries. The interactive visualization presents results from four scenarios: a reference
+                business-as-usual one where the country achieves universal access to electricity by 2030; another
+                setting a 50 per cent target of electricity generation from renewables; and a climate change scenario.
+              </p>
+
+              <p>Supplementary material is available <a href="https://github.com/un-modelling/atlantis">here</a>.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="geo-electricity">
+      <h1>Geo-spatial Electrification</h1>
+
+      <p>The Open Source Spatial Electrification Tool (OnSSET) uses geospatial data to determine the most cost-effective
+        conventional and renewable energy technologies for bringing electricity to specific localities. It is designed
+        to identify means of providing access to safe, affordable and reliable electricity to households that currently
+        do not have it. The model compares options such as connections to the electrical grid, and mini-grid or
+        stand-alone systems. It factors in population density, distance to transmission and road networks, renewable
+        energy potential, fuel prices and estimated electricity consumption per household, among other considerations.
+      </p>
+
+      <div class="projects">
+        <div class="t-col" style="background-image: url(/images/photos/solar-panel-hut.jpg)">
+          <div class="fuzz"></div>
+          <h3>Electrification Paths</h3>
+
+          <div class="t-gutter">
+            <a href="https://un-modelling.github.io/electrification-paths-presentation/">Visualisation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        var _as = document.querySelectorAll('aside');
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key == "Escape")
+            _as.forEach((a) => a.style.display = 'none');
+        });
+
+        function _show_aside(it) {
+          it.closest('.t-col').querySelector('aside').style.display = 'block';
+        };
+
+        _as.forEach((a) => {
+          a.addEventListener('mousedown', function () { a.style.display = 'none'; })
+        });
+
+        window._show_aside = _show_aside;
+      })();
+    </script>
+
+    <!-- CONTENT-ENDS -->
+  </main>
+
+  <footer>
+    <div class="t-col">
+      <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+    </div>
+
+    <div class="t-col">
+      <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+    </div>
+
+    <div class="t-col">
+      <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+    </div>
+
+    <div class="t-col">
+      <a href="mailto:null">Contact</a>
+    </div>
+  </footer>
+
+</body>
+
 </html>

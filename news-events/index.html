@@ -1,113 +1,103 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="640">
+<head>
+  <meta charset="utf-8">
 
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/header.css">
-    <link rel="stylesheet" href="/stylesheets/nav.css">
-    <link rel="stylesheet" href="/stylesheets/main.css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="640">
 
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/header.css">
+  <link rel="stylesheet" href="/stylesheets/nav.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css">
 
-    <title>UN Modelling Tools</title>
-  </head>
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
 
-  <body>
-    <header>
-  <a id="title" href="/">
-    Modelling&nbsp;Tools
-    <br>
-    <div id="for-sustainable-development">for&nbsp;sustainable&nbsp;development</div>
-  </a>
+  <title>Training information and links</title>
+</head>
 
-  <div id="logos">
-    <a href="http://www.undp.org/">
-      <img src="/images/logos/undp.svg"
-           alt="UNDP Logo">
+<body>
+  <header>
+    <a id="title" href="/">
+      Rebuilding&nbsp;Better&nbsp;and&nbsp;Greener
+      <br>
+      <div id="using-policy-simulation-tools">Using&nbsp;Policy&nbsp;Simulation&nbsp;Tools</div>
     </a>
-    <a href="https://www.un.org/development/desa/en/">
-      <img src="/images/logos/undesa.png"
-           alt="UNDESA Logo">
-    </a>
-  </div>
-</header>
 
+    <div id="logos">
+      <a href="https://www.un.org/development/desa/en/">
+        <img src="/images/logos/undesa.png" alt="UNDESA Logo">
+      </a>
+    </div>
+  </header>
+
+
+  <nav>
+    <input id="toggle" class="no-desktop" type="checkbox">
+
+    <div class="no-desktop">
+      <label for="toggle">
+        <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+          <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+    </div>
+
+    <a href="/about" class="toggleable">About the Project</a>
+
+    <a href="/og-model" class="toggleable">OG Country Projects</a>
+
+    <a href="/clews-model" class="toggleable">CLEWs Country Projects</a>
+
+    <a href="/wefm-model" class="toggleable">WEFM Country Projects</a>
+
+    <a href="/news-events" class="toggleable">News and Events</a>
+
+    <script>
+      (function () {
+        var as = document.querySelectorAll('body > nav a');
+        var path = location.pathname;
+
+        for (var a of as) {
+          var regex = new RegExp(`${a.pathname}`);
+
+          if (!a.href.match('#') && path.match(regex)) {
+            a.classList.add('active');
+            break;
+          }
+        }
+      })();
+    </script>
+  </nav>
+
+
+  <main>
+    <!-- CONTENT-STARTS -->
+    <style>
+      article img {
+        margin: 1em 3em 1em 2em;
+        width: calc(100% - 5em);
+      }
+
+      section {
+        padding-top: 7em;
+        margin-top: -6em;
+      }
+    </style>
 
     <nav>
-  <input id="toggle"
-         class="no-desktop"
-         type="checkbox">
-
-  <div class="no-desktop">
-    <label for="toggle">
-      <svg style="width:28px;height:28px" viewBox="0 0 24 18">
-        <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-      </svg>
-    </label>
-  </div>
-
-  <a href="/about"
-     class="toggleable">About</a>
-
-  <a href="/modelling-tools"
-     class="toggleable">Modelling Tools</a>
-
-  <a href="/country-projects"
-     class="toggleable">Country Projects</a>
-
-  <a href="/outreach-training"
-     class="toggleable">Outreach Training</a>
-
-  <a href="/news-events"
-     class="toggleable">News and Events</a>
-
-  <script>
-    (function() {
-    var as = document.querySelectorAll('body > nav a');
-    var path = location.pathname;
-
-    for (var a of as) {
-      var regex = new RegExp(`${a.pathname}`);
-
-      if (!a.href.match('#') && path.match(regex)) {
-        a.classList.add('active');
-        break;
-      }
-    }})();
-  </script>
-</nav>
-
-
-    <main>
-<!-- CONTENT-STARTS -->
-<style>
-article img {
-  margin: 1em 3em 1em 2em;
-  width: calc(100% - 5em);
-}
-
-section {
-  padding-top: 7em;
-  margin-top: -6em;
-}
-</style>
-
-<nav>
-  <a href="#news">NEWS</a>
-  <!-- <a href="#events">EVENTS</a> -->
-  <a href="#stories">STORIES</a>
-</nav>
+      <a href="#news">NEWS</a>
+      <!-- <a href="#events">EVENTS</a> -->
+      <a href="#stories">STORIES</a>
+    </nav>
 
 
 
-<!-- NEWS TEMPLATE
+    <!-- NEWS TEMPLATE
    <article>
     <h2></h2>
 
@@ -118,432 +108,791 @@ section {
     <p></p>
   </article>
 -->
-     
-<section id="news">
-  <h1>News</h1>
-  
-  <article>
-    <h2>UNDP-DESA start CLEWs project activities in Costa Rica</h2>
-
-    <strong>21-25 October 2019</strong>
-
-    <img src="/images/news-events/CLEWsCosta Rica 2019.png">
-
-    <p>In response to a request from the Government of Costa Rica, the United Nations Department of Economy and Social Affairs and the United Nations Development Program are implementing a capacity development project to support the formulation of sustainable development policies considering the interactions and interdependencies in the areas of climate, land use, energy and water. To start the project, a scoping mission was organized on 21-25 of October to engage with the Ministry of Planning, which is the project’s official counterpart, and line ministries related to CLEWs issues.</p>
-    <p>The mission team engaged in bilateral meetings with the Ministry of Planning and line ministries, which were successful in assessing data availability, confirming interest of the different institutions, and making an initial overview of modelling use and needs within each institution.</p>
-    
-    <img src="/images/news-events/Costa_Rica_CLEWs2019_2.jpg">
-    
-    <p>In addition, a one-day workshop was organized with the Ministry of Planning to present the CLEWs methodology and the scope of the UNDESA-UNDP capacity development projects in the use of modelling tools to the targeted institutions.  The workshop had the participation of around 26 government officials from ministries such as Planning; Environment, Water and Energy, the Costa Rican Electricity Institute, Housing and Human Settlements, Central Bank, Universidad de Costa Rica and the National Meteorological Institute, as well as the Electric Power & Energy Research Center from the University of Costa Rica. The participating institutions reiterated the need to have in-house analytical capacities to develop quantitative assessments and welcomed the project’s scope in this regard.</p>
-    <p>At the end of the workshop, the team met with the Vice-minister of Planning, Mr. Luis Daniel Castro, to update him on the project and the next steps for model development and implementation.</p>
-    
-  </article>
-  
-  <article>
-    <h2>UNDP and DESA implement third CLEWs workshop in Viet Nam</h2>
-
-    <strong>7-10 October 2019</strong>
-
-    <img src="/images/news-events/Vietnam CLEWs 1.jpg">
-
-    <p>UNDP and UNDESA have been supporting Viet Nam in the development and application of a CLEWs model since 2017 in response to requests from the National Centre for Socio-economic Information and Forecast (NCIF) of the Ministry of Planning and Investment.</p>
-    <p>A workshop to refine the analysis took place from the 7-10 of October 2019. Initial remarks were provided by the Deputy Director of the NCIF, Mr. Tran Thi Hong Minh and 10 analysts, mostly from the Ministry of Investment and Planning, and a technical officer from the National Center for Hydro-Meteorological Forecasting took part in the workshop. During the training, the participants engaged in hands-on exercises using the CLEWs integrated framework of Viet Nam to analyze sustainable energy policy scenarios. Most of the participants had taken part in the previous workshops and rapidly caught up with the model updates and related visualization tools. At the end of the workshop, the core group had moved on to designing more complex scenarios using the full Viet Nam CLEWs model, exploring the applications of the methodology and making notes on the scenarios to be formally developed to inform current sustainable development policy concerns.</p>
-    
-    <img src="/images/news-events/CLEWsVietNam_2.2.jpg">
-    
-    <p> Bilateral meetings were also held with Mr. Tran Thi Hong Minh, who emphasized the importance to have the CLEWs analysis to inform the 10-year Viet Nam strategy; as well as with the Vice President of the NCIF, Dr. Luong, Van Khoi, who remarked the importance of developing an assessment of competing water uses and availability in the Mekong Delta, which has been under environmental pressure and requires urgent attention.</p>   
-    <p> A final training will be conducted in the first quarter of 2020 to focus in the development of the specific policy scenarios of interest to the participating institutions and engage in analytical discussions to draft policy notes.</p>
- 
-  </article>
-  
-  <article>
-    <h2>First CLEWs workshop takes place in Bogor, Indonesia</h2>
-
-    <strong>29 September-2 October 2019</strong>
-
-    <img src="/images/news-events/CLEWSIndonesia2019a.png">
-
-    <p>In response to a request from the Directorate General of New, Renewable Energy, and Energy Conservation (DG-NREEC) of the Ministry of Energy and Mineral Resources UNDP and UNDESA are supporting the Government of Indonesia in adopting the CLEWs framework to support planning and policy formulation. The aim of the analysis is to review the National Energy Policy (RUEN) and analyze strategies to achieve the Nationally Determined Contributions (NDCs) for emission reductions.</p> 
-    <p>To this end, a project was set in place to engage in initial model development and deliver the first national training workshop, which took place from 29 of September to 2 of October, in the Bell Swiss Hotel in Bogor Indonesia.</p>
-    
-    <img src="/images/news-events/CLEWSIndonesia2019b.png">
-    
-    <p>The 4-day workshop on CLEWs of Indonesia was the first of a set of three workshops planned to fully transfer the model and the capacities in its use to inform sustainable development and energy policy. The workshop had the participation of approximately 25 government officials, mainly from the Ministry of Energy and Mineral Resources, and had the support of the UNDP-CO and the UNDP Regional Hub in Bangkok. Policy scenarios were discussed with officials from the Directorate of New and Renewable Energy and Energy Conservation with feedback from the trainees participating in CLEWs. Next steps were defined to follow up on data requirements for the model and the implementation of the next workshop.</p>
-  </article>
-  
-  <article>
-    <h2>First CLEWs workshop takes place in Ethiopia</h2>
-
-    <strong>19-23 August 2019</strong>
-
-    <img src="/images/news-events/clewsethiopiaaug2019.jpg">
-
-    <p>DESA, ECA and UNDP conducted the first national Climate, Land, Energy and Water systems (CLEWs) training workshop in Addis Ababa, Ethiopia. The workshop is part of a capacity development project to strengthen national capacity for conducting integrated assessments in support of coherent national sustainable development plans. Eighteen participants from the Ministry of Water, Irrigation and Energy, Central Statistics Agency, Ministry of Agriculture and Livestock, Environment, Forestry and Climate Change Commission, National Development and Planning Commission and the National Meteorology Agency took part in the event.</p>
-  </article>
-  
-  <article>
-    <h2>DESA presents progress on the CLEWs model of Cameroon in Yaoundé</h2>
-
-    <strong>8-12 July 2019</strong>
-
-    <img src="/images/news-events/clewscameroonjuly2019.jpg">
-
-    <p>DESA, ECA and UNDP conducted a mission to Yaoundé, Cameroon, to deliver the first national workshop to enhance policy coherence for sustainable development through integrated assessments and institutional strengthening in Cameroon. The mission is part of a capacity development project to support the use of quantitative analysis to inform the national sustainable development strategy. The project focuses on the development, transfer and application of the Climate, Land, Energy and Water systems (CLEWs) integrated assessment methodology.</p>
-    <p>The mission team held bilateral meetings with a range of project stakeholders related to the CLEWs sectors, including the Ministry of Economy, Planning and Regional Development (MINEPAT) which is the main government counterpart to the project. A workshop was held on the 9-10 of July with the objective to introduce the CLEWs framework to participating government institutions. The workshop was opened with a welcome speech by Antonio Pedro – Director of ECA’s Office for Central Africa, followed by opening remarks by Saidou Hamadou of MINEPAT and Thomas Alfstad, UNDESA. Discussions were held on the model structure, data and policy priorities, and spatial focus to the assessment, including the regionalization of the model and main locations of interest for the assessment.</p>
-  </article>
-  
-  <article>
-    <h2>DESA conducts mission to Ethiopia to strengthen institutional arrangements for CLEWs modelling project</h2>
-
-    <strong>24-28 June 2019</strong>
-
-    <img src="/images/news-events/clewsethiopiajune2019.jpg">
-
-    <p>The Economic Analysis and Policy Division and the Division for Public Institutions and Digital Government of DESA, conducted a mission to Addis Ababa as part of the implementation of a capacity development project that aims to develop, transfer and apply an integrated Climate, Land, Energy and Water systems (CLEWs) assessment model to support policy coherence in Ethiopia. The project is being implemented at the request of the Minister of Water, Irrigation and Energy (MoWIE) and is jointly implemented by UNDESA, UNDP and UNECA. Several meetings were held with line ministries and government institutions such as the Ministry of Agriculture, Livestock and Resources, the National Planning Commission, the Central Statistical Agency, and key stakeholders from the research community. Policy priorities, institutional engagements, and data availability were discussed with each of the institutions, as well as an update of the project direction and planning. Finally, a meeting with the State Minister of Water and Sanitation was held to brief him on the mission and coordinate a project document describing the way forward for model development, data procurement, interinstitutional collaboration and initial policy priorities of MoWIE to assess using the CLEWs model. </p>
-  </article>
-  
-  <article>
-    <h2>2019 Summer School on Modelling Tools for Sustainable Development in Trieste, Italy</h2>
-
-    <strong>10-26 June 2019</strong>
-
-    <img src="/images/news-events/trieste.jpg">
-
-    <p>The third Summer School on Modelling Tools for Sustainable Development was held at ICTP (International Centre for Theoretical Physics) in Trieste, Italy, on 10-26 June 2019. KTH, the World Bank and the OpTIMUS community of modellers organized the training programme, joined by UNDP and UNDESA. </p>
-    <p>Participants from academic, government institutions and international organizations hailed from about 20 countries and attended three tracks of training: 1) OSEMoSYS (Open-Source Energy Modelling System) and CLEWS; 2) OnSSET (Open Source Spatial Electrification Toolkit), and 3) Data management. A High-level Meeting and Strategic Discourse followed the training program. Participants presented model posters, which they developed during the training, with selected presentations made at the High Level Meeting on 27-28 June.</p>
-    <p>OSEMoSYS is a flexible, open-source tool for energy modelling which has been a high degree of flexibility and is capable of accommodate other “sectors”, such as water and land and of including climate change impacts. There is a growing conversion to this tool by the energy modelling community from developing and developed countries. 
-
-</p>
-  </article>
-  
-<article>
-    <h2>Indonesia requests UNDP and UNDESA modelling assistance to inform the National Renewable Energy Plan</h2>
-
-    <strong>6-10 May 2019</strong>
-
-    <img src="/images/news-events/indonesia1.jpg">
-  <p>
-    <img src="/images/news-events/indonesia2.jpg">    
-
-    <p>In response to the expressed interest of the Government of Indonesia to use modelling tools to inform sustainable development policies, the UNDP and UNDESA conducted a scoping mission to Jakarta. The objective of the workshop was to meet with prospective project stakeholders and assess potential scope and aim of a CLEWs capacity development project. Bilateral meetings were held with the Ministry of Energy and Mineral Resources, the Ministry of Planning, Ministry of Environment and Forestry, Ministry of Agriculture, the National Energy Council and the Oil Palm Estate Fund. During the missions the UN team discussed current policy needs and priorities with the participating institutions; their interest in a CLEWs project; the current use of models and quantitative analyses to support policy formulation within the government; and challenges of the country, such as data availability, modelling capacities and inter-institutional coordination. During the meetings, the participating institutions confirmed interest in the project and agreed the planning to reach the Government’s National Renewable Energy Plan was a priority. A CLEWs project will be developed to support the analysis of renewable electricity generation and biofuels.</p>
-  </article>
-  
-  <article>
-    <h2>Second workshop on CLEWs modelling in Viet Nam</h2>
-
-    <strong>25-29 March 2019</strong>
-
-    <p>A second national training workshop on the Climate, Land, Energy and Water (CLEWs) integrated analysis framework in Hanoi was conducted in March 2019.  Since 2017, UNDESA and UNDP have been implementing capacity development activities in Viet Nam to use the CLEWs methodology as a tool to analyze interconnected aspects of resources management when planning sustainable development strategies. Participants from the Ministry of Investment and Planning, Institute of Strategy and Policy on Natural Resources and Environment, Development Strategy Institute, National Center for Hydro-Meteorological Forecasting, and Ho Chi Minh City took part in the workshop. </p>
-    <p>During the workshop participants were introduced to a CLEWs model specifically tailored to the national circumstances of Viet Nam. The next phase of the project will focus on development of policy analysis using this model to conduct regional analyses focusing on different issues of concern in each region, such as salination of deltas, water stress, erosion, deforestation and nationally determined contributions to GHG emission reductions. </p>
-  </article>
-  
-  <article>
-    <h2>Workshop on SDG7 Implementation in Asia and the Pacific</h2>
-
-    <strong>19-21 March 2019</strong>
-
-    <img src="/images/news-events/bangkok.jpg">
-
-    <p>The UNDP Bangkok Regional Hub jointly with KTH (Royal Institute of Technology, Sweden) organized an event on integrated modelling within a larger workshop on SDG7 implementation in Asia Pacific, hosted and organized by ESCAP and UN DESA. The workshop brought together about 90 participants from 17 countries in Asia and CIS, representatives from Africa and Latin America regions, and 20 global and regional organizations, including UN agencies. For the agenda and presentations, please click <a href="https://www.unescap.org/events/workshop-sdg7-implementation-asia-and-pacific">here</a>. Energy, agriculture and land use change contribute more than 90% of greenhouse gas emissions. Action on climate change needs to focus on these areas. At the same time, energy is fundamental for achieving (or not) many sustainable development goals. These natural resource and environmental systems are interdependent in the real world. Further, they also impact our economies and people.</p>
-    
-    <p>By modelling energy, water, land use and climate in an integrated framework, analysts have generated insights for integrated policy making. Such integrated models have also been linked with economy-wide models to estimate impacts on GDP, fiscal spending and household incomes. They help generate insights into precisely the kind of complex development challenges that are at the heart of integrated SDG actions and help governments with coherent and more realistic planning.</p>
-    
-    <p>The event featured three types of modelling tools developed and/or refined in recent years by a group of experts and academics, with KTH at the lead: (1) OnSSET, a geo-spatial tool being used by the World Bank for least-cost electrification planning; (2) OSeMOSYS, an open-source version of an established energy modelling tool used for assessment and planning of bulk energy investment, and (3) CLEWs, an integrated framework bringing together Climate, Land, Energy and Water models.</p>
-    
-    <p>UNDP BPPS and UNDESA have supported capacity development of analysts and policy makers to build and use such models in nine countries in Latin America and Africa so far. The workshop featured national, city-level and sub-regional applications of such integrated models. In Nicaragua, for example, the integrated model helped to assess how does the stated policy goal to increase agricultural and livestock production reconcile with the policy goal of increasing reforestation, how the demand on water from increased use of energy and satisfy growing demand from other sectors – such as growing crops can be addressed. By linking the integrated climate-land-energy-water model results with an economy-wide model, analysts also showed how are the planned investments in energy expected to impact green house gas emissions, GDP and household consumption.</p>
-    
-    <p>Other institutions also supported such integrated modelling exercises in cities, of which two were featured at the event: in a very big city (New York) and in a very small city (Oskarsham, Sweden). Other cases profiled included Bolivia (energy and integrated resource modelling assessing various energy scenarios as planned in Bolivia’s National Development Plan by 2030 and how they feed into Intended Nationally Determined Contributions (INDCs) for reduction in green house gas emissions, a commitment made under COP21/ Paris Agreement; and a sub-regional assessment of the Indus River basin spanning Afghanistan, China, Pakistan, and India and providing over 90% of food supply in Pakistan. The event also set the foundation for the Asia-Pacific Energy & Integrated Resource Modelling Platform. </p>
-  </article>
-  
-  <article>
-    <h2>Scoping mission takes place in Cameroon</h2>
-
-    <strong>12-15 February 2019</strong>
-
-    <img src="/images/news-events/cameroon.jpg">
-
-    <p>UNDESA, in collaboration with UNDP and UNECA, conducted a scoping mission to Yaoundé, Cameroon to launch a capacity development project to develop, transfer and apply the Climate, Land, Energy and Water systems (CLEWs) modelling tool in support of policy coherence in national sustainable development strategies.</p>
-    
-    <p>The mission team held bilateral meetings with a range of potential project stakeholders including the Ministry of Economy, Planning and Regional Development, Ministry of Environment, Nature Protection and Sustainable Development, National Institute for Statistics, Ministry of Energy and Water, National Observatory on Climate Change (ONACC), Ministry of Agriculture and Rural Development,  National Institute of Cartography, United Nations Development Program Country Office and the United Nations Assistant Resident Coordinator’s Office. The aim of the meetings was to conduct a situation and needs assessment, assess current institutional arrangements and mechanisms, inform potential counterparts of project scope, assess data availability and define project plans and objectives.</p>
-    
-    <p>A workshop was held on the 14th of February 2019 with aim to bring together national stakeholders. The workshop was opened by a representative of the Ministry of Economy, Planning and Regional Development. The UN team introduced the CLEWs methodology, including rationale and objectives, institutional considerations and CLEWs capacity development project structure, timeline and methods. National counterparts presented their relevant activities including analysis. Discussions were held to elaborate on project scope, methods and objectives and to answer questions and concerns from participants.</p>
-    
-    <p>The CLEWs analysis will be tailored to inform the 2nd phase of the national development plan in an iterative process with the main counterpart. After which a training program will initiate to transfer the full model. This mission is part of a project with the aim of enhancing policy coherence for the SDGs through integrated assessments and institutional strengthening in Africa.</p>
-  </article>
-  
-    <article>
-    <h2>National CLEWs training is finalized in Bolivia</h2>
 
-    <strong>4-8 February 2019</strong>
-
-    <img src="/images/news-events/clewsbolivia.jpg">
-
-    <p>The fourth and final workshop on integrated analysis with the Climate, Land, Energy and Water Systems (CLEWs) took place in La Paz, Bolivia on the week of 4-8 of February 2019. The workshop, organized by UNDESA in collaboration with the Social and Economic Policy Analysis Unit (UDAPE) of the Ministry of Development, the technical expertise of the Royal Institute of Technology in Sweden, and the in-country support of UNDP Bolivia, provided an opportunity for the inter-ministerial analytic team to continue working on data preparation and scenario analysis to inform sustainable development strategies with the CLEWs framework. The team is led by officials from UDAPE, with participation from the Ministry of Environment and Water, the National Electricity Supply Company, and the Ministry of Hydrocarbons.</p>
-      
-    <p>During the workshop participants were engaged in developing scenario analysis on key policy issues that were previously identified by Government counterparts;  namely: i) bioethanol production from sugarcane to meet mandated volumes for gasoline blending as required under the new biofuels law, while also ensuring sugar production for food security; ii) biodiesel production from soybean as a means to maintain output from the soy sector, which has been negatively impacted by falling exports due to changes in regional preferential tariffs; and  iii) analysis of the costs and benefits of large scale investments in multi-purpose dams and reservoirs. The areas of analysis are directly related to Goal 2 Zero Hunger, Goal 6 Clean Water and Sanitation, and Goal 7 Affordable and Clean Energy. Indirectly, the policy issues being analyzed also touch on Goal 9 Industry, Innovation and Infrastructure and Goal 12 Responsible Consumption and Production.</p>
-      
-    <p>The interministerial team will now prepare policy notes to report on the main findings to inform policymakers at a dissemination conference planned for the second quarter of 2019.</p>
-  </article>
-  
-    <article>
-    <h2>Supporting Policy Coherence in Ethiopia using the CLEWs framework</h2>
-
-    <strong>17 January 2019</strong>
-
-    <img src="/images/news-events/clewsethiopiajan2019.jpg">
-
-    <p>African countries face important sustainable development challenges. Food security, energy for all, and facilitating water access remain some of the main concerns to ensure the wellbeing of the population. However, these all rely on natural resources that are highly sensitive to climate change and variability. Addressing these development issues will require quantitative modelling tools and an integrated approach to policymaking, ensuring that overlapping goals, interlinked challenges and potential tradeoffs are considered when planning for mid and long-term policies.</p>
-      
-      <p>To support Ethiopia in this endeavor, UNDESA, UNDP and the Economic Commission for Africa (ECA) are implementing a project that will focus on two areas: 1) the development of an integrated climate, land, energy and water (CLEWs) assessment to identify sectoral interlinkages and trade-offs, and assess alternative scenarios to mitigate unwanted policy outcomes; and 2) support policy coherence and institutional strengthening to facilitate coordination among stakeholders in areas related to sustainable development.</p>
-      
-      <p>As part of the project, a scoping mission was organized (11-18 January) and a one-day national inception workshop took place in Addis Ababa (17 January). These activities introduced the project’s objectives, the CLEWs framework and the importance of designing coherent policies for sustainable development. The event had the participation of the Minister of Water, irrigation and Electricity, Mr. Seleshi Bekele, and approximately 70 participants from various ministries.</p>
-     
-      <p>For more information: <a href="https://www.uneca.org/stories/un-entities-support-ethiopia%E2%80%99s-quest-policy-coherence-sdgs">https://www.uneca.org/stories/un-entities-support-ethiopia%E2%80%99s-quest-policy-coherence-sdgs</a></p>
-  
-  </article>
-  
-     <article>
-    <h2>UNDESA presented progress in the development of the water for the Central Region of Mexico</h2>
-
-    <strong>21-23 of November 2018</strong>
-
-    <img src="/images/news-events/mexico1.jpg">
-
-    <p>Since 2017, UNDESA and UNDP have been working together with the National Institute of Ecology and Climate Change of Mexico (INECC) to develop a climate, land, energy and water systems integrated assessment in one of the high priority areas of the country: the central region of México. This region represents around 5% of the total land area of the country, concentrates one third of the country’s population and around 35% of national GDP. However, it is also one of the regions with highest water stress, representing a great challenge for sustainable development. With this focus, UNDESA, in collaboration with UNDP and INECC have since worked on an integrated land-water model, starting with the hydrological component for which the Water Evaluation and Planning (WEAP) system was chosen.</p>
-    
-    <img src="/images/news-events/mexico2.jpg">   
-     
-    <p>To present progress of the project, in November 21-23, UNDESA, UNDP and INECC organized a working meeting in Mexico City. During the meeting, the necessary data required to complete the hydrological model, and the necessity to better represent competing water demands such as agriculture, domestic, public, commercial, industrial, livestock and mining were discussed. The working meeting was attended by technical government officials of INECC and CONAGUA, the main administrative body for water management in the country. Feedback was provided by the participants, providing inputs to improve the representation of the hydrological system of the central region of Mexico. Finally, a roadmap was outlined to complete the water analysis component of the project.</p>
-    
-       <p><a href="https://photos.app.goo.gl/GJVGEFyUEXsrX8jY6">Additional photos</a></p>
-       
-  </article>
-  
-  <article>
-    <h2>UNDESA-UNDP complete the third CLEWs workshop in Bolivia</h2>
-
-    <strong>10-14 September 2018</strong>
-
-    <img src="/images/news-events/clewsboliviasept2018.jpg">
-  
-    <p>During the week of 10 to 14 September, EAPD conducted the third training workshop on the Climate, Land, Energy and Water Systems (CLEWs) integrated analysis methodology in La Paz, Bolivia. The workshop was organized in collaboration with UNDP and the Social and Economic Policy Analysis Unit (UDAPE). Twenty-three government officials from UDAPE and several ministries such as Planning and Development (MPD), Environment and Water (MMAyA), Rural Development and Land (MDRyT), Energy (ME), Hydrocarbons (MH), the National Meteorology and Hydrology Service (SENAMHI), and state-owned companies such as the transmission system operator (CNDC), the National Electricity Supply Company (ENDE), as well as the state-owned oil and gas company (YPFB), participated, along with members of the UNDP country team. </p>
-    
-    <p> During the workshop participants were engaged in hands-on scenario development with the CLEWs framework, exploring key policy areas of interest to the Government, including: i) land use, water use and emission impacts of the new biofuels law; ii) impacts of new multi-purpose dam constructions; iii) agricultural modernization and iv) trade in agricultural products. On the final day, the preliminary results from the scenario modelling exercises were presented and next steps were outlined regarding the necessary updates needed in the model to adequately address and develop the policy scenarios proposed.</p>
-  </article>
-  
-  <article>
-    <h2>CLEWs modelling training starts in Ghana</h2>
-
-    <strong>16 May 2018</strong>
-
-    <img src="/images/news-events/956b0aacb34f231e178b81505fd17285.jpg">
-
-    <p>From 7 to 11 May, Ghana’s first training workshop on the CLEWs integrated analysis framework took place in Accra. The workshop was organized by UNDESA, UNDP and the University of Ghana, with participation from the Energy Commission, the Northern Development Authority, the Ghana Irrigation Development Authority and the University of Ghana. Three workshops on the CLEWs modelling framework are planned for the project.</p>
-
-    <p>Participants engaged in hands-on exercises on the energy dimension of CLEWs. Scenario exercises explored key policy areas, namely; i) the vulnerability of hydropower generation to droughts, specifically in relation to climate change; ii) promotion of renewable energy; iii) prospects and viability of waste to energy projects; and iv) energy efficiency. On the final day, the preliminary results from the scenario modelling were presented. Meetings with the UNDP country office and country counterparts were held to plan project implementation.</p>
-  </article>
-
-  <article>
-    <h2>Second national CLEWs training workshop takes place in Bolivia</h2>
-
-    <strong>23 Apr 2018</strong>
-
-    <img src="/images/news-events/10c795b53bb8d2f4f64c5d5af3a9905d.jpg">
-
-    <img src="/images/news-events/b9baa0ede459561f0539ff623400bb2b.jpg">
-
-    <p>From 16 to 20 April, UNDESA and UNDP conducted the second training workshop on CLEWs integrated analysis in La Paz, Bolivia. Twenty-eight government officials from several institutions took part, representing the social, economic and environment sectors. Participants came from the Social and Economic Policy Analysis Unit, the Ministry of Planning and Development, the Ministry of Environment and Water, National Load Dispatch Committee, the National Electricity Supply Company, the National Meteorology and Hydrology Service, the state-owned oil and gas company YPFB, the Ministry of Rural Development and Land, the Ministry of Energy, the Ministry of Hydrocarbons and the UNDP country office.</p>
-
-    <p>Participants conducted hands-on exercises with the CLEWs framework, exploring key policy areas: i) energy exports, ii) biofuels production, iii) water quality and treatment, iv) introduction of gas-to-liquids technology and v) agricultural modernization. On the final day, the preliminary results were presented. Mr. Alvaro Lazo, Sub-Director of Macrosectorial Policy of the Social and Economic Policy Analysis Unit, provided final remarks, highlighting the importance of integrated modelling to inform policies and interministerial engagement to improve analysis of sustainable development strategies.</p>
-
-    <p>The expertise from different institutions enriched the discussions and supported integrated analysis with important insights and perspectives. The process strengthened efforts to build an interministerial analytical team to support policy coherence for sustainable development.</p>
-  </article>
-
-  <article>
-    <h2>Workshop in Bolivia introduces modelling tool for integrated water resources management</h2>
-
-    <strong>13 Apr 2018</strong>
-
-    <img src="/images/news-events/7def39570d2999f2d8a77ff27579e3a7.jpg">
-
-    <p>At the request of the Social and Economic Policy Analysis Unit, a three-day workshop on hydrological modelling using the Water Evaluation and Planning System (WEAP) was held in La Paz from 11 to 13 April. The workshop was organized by UNDESA, UNDP and the Social and Economic Policy Analysis Unit, and co-facilitated by a UNDP consultant along with two specialists from the Ministry of Environment and Water. Ten officials from the Social and Economic Policy Analysis Unit and the National Load Dispatch Committee, who are part of the interinstitutional team of government officials being trained in integrated tools, attended the workshop.</p>
-
-    <p>Integrated water resource management concepts were introduced, complemented with hands-on exercises and model exploration. Participants became familiar with WEAP's interface and functionalities, and with Bolivia's Surface Water Balance model (BHSB) in WEAP, its components, methodology and main results. The BHSB was developed by the Ministry of Environment and Water in collaboration with the Stockholm Environment Institute. It is the main input for water balance data used in the CLEWs model for Bolivia.</p>
-  </article>
-
-  <article>
-    <h2>Assessing national development policies in Mongolia with economy-wide modelling</h2>
-
-    <strong>19 Jan 2018</strong>
-
-    <img src="/images/news-events/d06bffe896ef4f068af576ae2ba16989.jpg">
-
-    <p>UNDP and UNDESA, in coordination with Mongolia’s National Development Agency and the Prime Minister's Office, are implementing a joint capacity development project to strengthen policy analysis skills by using an economy-wide model. The first workshop took place in Ulaanbaatar from 15 to 18 January. The objective was to introduce a simplified model tailored to assess the national development policies of Mongolia, including the National Sustainable Development Vision 2030. The training was attended by 14 government officials from the National Development Agency, Ministry of Finance, Central Bank and Development Bank of Mongolia, among other institutions.</p>
-  </article>
-
-  <article>
-    <h2>UNDESA and UNDP carry out the first CLEWS training in Bolivia</h2>
-
-    <strong>4 Dec 2017</strong>
-
-    <img src="/images/news-events/fb6f6f8ed3e1c742df00d7599f3776c3.jpg">
-
-    <p>From 27 November to 1 December, the first training workshop on CLEWs integrated analysis took place in La Paz, Bolivia. Organized by UNDESA, UNDP and Bolivia’s Social and Economic Policy Analysis Unit, with technical expertise of the Royal Institute of Technology and the International Atomic Energy Agency, the session engaged 15 government officials from the Social and Economic Policy Analysis Unit, the National Load Dispatch Committee, the National Meteorology and Hydrology Service, the state-owned oil and gas company YPFB, the Ministry of Energy and the Ministry of Hydrocarbons.</p>
-
-    <p>During the workshop participants took part in hands-on exercises focused on the energy system as a starting point to familiarize themselves with the CLEWs framework. Three key policy areas were explored through the exercises: i) energy exports, ii) the impacts of large new end-users (such as copper mines) on the power system and iii) the climate sensitivity of the power system. On the final day, the preliminary results from scenario-modelling exercises were presented to senior government officials. They discussed specific policy questions involved in analysing cross-sectoral issues in support of sustainable development.</p>
-  </article>
-
-  <article>
-    <h2>Training on energy modelling concludes in Paraguay</h2>
-
-    <strong>6 Nov 2017</strong>
-
-    <img src="/images/news-events/a58eec6faf69f30fde77a61a44e960c7.jpg">
-
-    <p>A third national training workshop on energy systems modelling was held in Asuncion, Paraguay, from 30 October to 3 November. The workshop was organized by UNDESA, UNDP and the Secretariat of Planning for Economic and Social Development, with the support of an external expert from the Royal Institute of Technology of Sweden. Participants from the Secretariat of Planning, the Vice-Ministry of Mines and Energy, the National Electricity Administration, the electricity company Itaipu and the Universidad Nacional de Asuncion were in attendance.</p>
-
-    <p>Participants engaged in hands-on exercises to develop scenarios using the energy systems model introduced in earlier workshops. In particular, three key policy areas were explored: i) power sector investment and electricity exports; ii) energy consumption in households, with a focus on reducing dependence on traditional biomass and improving energy efficiency; and iii) transport sector policy, in particular, the expansion of public transport. Side meetings between the various energy sector stakeholders discussed policy issues and how these can be addressed through analysis.</p>
-
-    <p>This was the sixth and final workshop of a capacity development project that has transferred an economy-wide model and an energy systems model to the national Government to support sustainable development policy-making.</p>
-  </article>
-
-  <article>
-    <h2>Second energy systems analysis training conducted in Paraguay</h2>
-
-    <strong>2 Oct 2017</strong>
-
-    <img src="/images/news-events/10e830a62330467fc8254be6a866b2bc.jpg">
-
-    <p>From 18 to 22 September, UNDESA, UNDP and the Secretariat of Planning for Economic and Social Development of Paraguay implemented the second national training workshop on energy systems modelling in Asuncion. The workshop included 13 participants from the Ministry of Planning for Development, the Ministry of Mines and Energy, the National Electricity Administration, the electricity company Itaipu and the Universidad Nacional de Asuncion. Participants engaged in hands-on work and exercises to implement improvements to the energy systems model developed during the first workshop.</p>
-
-    <p>A particular focus was put on the expansion and revision of how the transport sector and biofuel value chains are represented in the model. Various energy sector stakeholders discussed policy issues and how these can be addressed through analysis and modelling. The workshop featured presentations on the Itaipu power station and related bilateral agreements with Brazil, and on the medium-term electricity generation and transmission expansion plan by the National Electricity Administration.</p>
-  </article>
-
-  <article>
-    <h2>UNDESA and UNDP explore scope for capacity development in Cameroon and Zambia</h2>
-
-    <strong>29 Aug 2017</strong>
-
-    <img src="/images/news-events/59850e4ce6bbca9c30f88d1c96397275.jpg">
-
-    <p>Scoping missions to Yaoundé, Cameroon (16 August) and Lusaka, Zambia (24-25 August) were conducted to explore the possibilities for a joint UNDESA-UNDP capacity development program centred on the CLEWs integrated assessment modelling tool.</p>
-
-    <p>In Yaoundé, the mission included discussions with the UNDP country office, the Climate Change Observatory, the Ministry of Environment, the Ministry of Agriculture, the Ministry of Energy and Water and the Ministry of Economy. These institutions expressed keen interest in developing capacity for integrated analysis in the country.</p>
-
-    <p>In Lusaka, the mission found an equally strong interest from the ministries of agriculture, water and energy, and environment and forestry. The UNDP country office offered to coordinate the capacity development project with activities of the UN Joint Programme on Climate Change and Disaster Risk Reduction. The Planning Ministry suggested it could play an important leadership role in the project, based on existing capacity for quantitative modelling and access to data.</p>
-  </article>
-
-  <article>
-    <h2>Energy modelling training begins in Paraguay</h2>
-
-    <strong>14 Aug 2017</strong>
-
-    <img src="/images/news-events/80e57cf073b9c74d7e2d26f6016b3d3c.jpg">
-
-    <p>From 7 to 11 August, UNDESA, UNDP and the Secretariat of Planning for Economic and Social Development of Paraguay implemented the first energy systems model workshop in Asuncion. The workshop included 15 government officials from several ministries and government agencies, such as the Secretariat of Planning, the Ministry of Mines and Energy, and the Ministry of Industry and Trade; from energy entities such as the National Electricity Administration and the electricity company Itaipu; and from the Universidad Nacional de Asuncion.</p>
-
-    <p>Sessions introduced participants to the main underlying concepts of linear programming and energy systems modelling, and featured hands-on sessions where attendants built a simplified energy systems model for Paraguay. The workshop facilitated the exchange of views, data and perspectives on energy issues, and featured two presentations: one on the MESSAGE model for Paraguay by the Vice-Ministry of Mines and Energy and a second on the Paraguay LEAP model by the Universidad Nacional de Asuncion.</p>
-  </article>
-
-  <article>
-    <h2>Economy-wide modelling training concludes in Costa Rica</h2>
-
-    <strong>13 Aug 2017</strong>
-
-    <img src="/images/news-events/860cd4e1dbeb6d279328a66b1794a783.jpg">
-
-    <p>Capacity development activities continued in Costa Rica with the implementation of the 3rd economy-wide modelling workshop in San José from 7 to 10 August. The training focused on the CGE dynamic model. It assessed different shocks to the economy, increases in energy efficiency, greater investments in infrastructure and other simulations. Due to the important insights the model has provided, participants requested another workshop to further explore and confirm the main findings, in preparation for a presentation to medium- and high-level government officials.</p>
-  </article>
-
-  <article>
-    <h2>Scoping mission to Dakar completed</h2>
-
-    <img src="/images/news-events/73448563b4c6bf65399d0258088fc4f7.jpg">
-
-    <p>A scoping mission to Dakar, Senegal assessed prospects for UNDESA and UNDP to help develop capacities in integrated methodologies that support evidence-based sustainable development policies. The mission included meetings with the Office of the Prime Minister, the Ministry of Finance, Economy and Planning at various levels, the Ministry of Energy, the Ministry of Environment and Sustainable Development, the Ministry of Agriculture, the National Agency of Civil Aviation and Meteorology, and the UNDP country office. </p>
-
-    <p>The mission found strong interest from all ministries and specialized departments. There is pre-existing capacity in energy, systems dynamic, water management and climate modelling, which is a valuable input for delivering a country project. No significant capacity on multisectoral integrated modelling was found, however, which is where the proposed project could be of greatest value. The government of Senegal will discuss how to coordinate the project and potential contributions to implementation.</p>
-  </article>
-
-  <article>
-    <h2>Mission to kickstart CLEWs modelling in Mexico</h2>
-
-    <strong>30 July 2017</strong>
-
-    <img src="/images/news-events/842d65a1c8314b2dcd8a053f0575bf1e.jpg">
-
-    <p>From 24 to 28 July, UNDESA and UNDP conducted a mission to Mexico City to launch a CLEWs capacity development project. It is part of a joint UNDESA and UNDP initiative to develop national capacity for using modelling tools to inform sustainable development policies.</p>
-
-    <p>During the mission, preliminary work done by three government experts trained during the CLEWs Trieste Summer School of in June 2017 was presented to senior officials. Several meetings were held with a range of government institutions and stakeholders to present the CLEWs methodology. The mission was successful in ensuring continued high-level support, building potential collaborations with different government offices, and developing clear and detailed plans for model development and capacity-building.</p>
-  </article>
-
-  <article>
-    <h2>Scoping mission to Cameroon is completed to assess the potential of developing a CLEWs model</h2>
-
-    <strong>21-23 July 2017</strong>
-
-    <p>Between 21 and 23 July a scoping mission to Yaoundé, Cameroon was concluded, with discussions with the National Office of Statistics, the Electricity Authority, the Ministry of Scientific Research and Innovation, and UNDP units for environment and governance, as well as with the UN Resident Representative. The mission found there is strong interest and the initial needed capacity in the country to implement a joint UNDESA-UNDP capacity development program centered on the integrated assessment modelling tool for climate change, land, energy and water systems. On 24 and 25 August Eduardo visited for Lusaka, Zambia, for the same purpose. The mission found an equally strong interest in the ministries of Agriculture, Water and Energy, Environment, Forestry and NDC unit. UNDP Country office expressed the interest of coordinating the capacity development project, if implemented, with the capacity development activities contemplated in the UN Joint Program on Climate Change and Disaster Risk Reduction. More detailed discussions with Planning Ministry, given their understanding of modelling and data availability, suggest Planning could play an important leadership role in the project.</p>
-  </article>
-
-  <article>
-    <h2>Mission to start capacity development in CLEWs modelling in Ghana</h2>
-
-    <strong>24 July 2017</strong>
-
-    <p>During the week of 17 to 21 July, UNDESA and IAEA, conducted a workshop and data gathering mission to Accra to start the implementation of a CLEWs capacity development project in Ghana. The mission and workshop are part of the joint initiative of UNDESA and UNDP to promote in-depth capacity development on modelling tools to inform sustainable development policies. The policy relevance and main methodological features of the CLEWs integrated assessment modelling tool were presented along with the preliminary results developed by three government officials trained in the CLEWs Trieste Summer School organized in 12-30 June 2017. The presentation of preliminary results by the government team significantly increased the interest of the government institutions participating in the workshop as it clearly demonstrated the relevance and utility of the tool. The mission was successful in defining the data requirements, strategy of engagement of modelling teams in national institutions, and refining the policy objectives of the project.</p>
-  </article>
-</section>
-
-<!--
+    <section id="news">
+      <h1>News</h1>
+
+      <article>
+        <h2>UNDP-DESA start CLEWs project activities in Costa Rica</h2>
+
+        <strong>21-25 October 2019</strong>
+
+        <img src="/images/news-events/CLEWsCosta Rica 2019.png">
+
+        <p>In response to a request from the Government of Costa Rica, the United Nations Department of Economy and
+          Social Affairs and the United Nations Development Program are implementing a capacity development project to
+          support the formulation of sustainable development policies considering the interactions and interdependencies
+          in the areas of climate, land use, energy and water. To start the project, a scoping mission was organized on
+          21-25 of October to engage with the Ministry of Planning, which is the project’s official counterpart, and
+          line ministries related to CLEWs issues.</p>
+        <p>The mission team engaged in bilateral meetings with the Ministry of Planning and line ministries, which were
+          successful in assessing data availability, confirming interest of the different institutions, and making an
+          initial overview of modelling use and needs within each institution.</p>
+
+        <img src="/images/news-events/Costa_Rica_CLEWs2019_2.jpg">
+
+        <p>In addition, a one-day workshop was organized with the Ministry of Planning to present the CLEWs methodology
+          and the scope of the UNDESA-UNDP capacity development projects in the use of modelling tools to the targeted
+          institutions. The workshop had the participation of around 26 government officials from ministries such as
+          Planning; Environment, Water and Energy, the Costa Rican Electricity Institute, Housing and Human Settlements,
+          Central Bank, Universidad de Costa Rica and the National Meteorological Institute, as well as the Electric
+          Power & Energy Research Center from the University of Costa Rica. The participating institutions reiterated
+          the need to have in-house analytical capacities to develop quantitative assessments and welcomed the project’s
+          scope in this regard.</p>
+        <p>At the end of the workshop, the team met with the Vice-minister of Planning, Mr. Luis Daniel Castro, to
+          update him on the project and the next steps for model development and implementation.</p>
+
+      </article>
+
+      <article>
+        <h2>UNDP and DESA implement third CLEWs workshop in Viet Nam</h2>
+
+        <strong>7-10 October 2019</strong>
+
+        <img src="/images/news-events/Vietnam CLEWs 1.jpg">
+
+        <p>UNDP and UNDESA have been supporting Viet Nam in the development and application of a CLEWs model since 2017
+          in response to requests from the National Centre for Socio-economic Information and Forecast (NCIF) of the
+          Ministry of Planning and Investment.</p>
+        <p>A workshop to refine the analysis took place from the 7-10 of October 2019. Initial remarks were provided by
+          the Deputy Director of the NCIF, Mr. Tran Thi Hong Minh and 10 analysts, mostly from the Ministry of
+          Investment and Planning, and a technical officer from the National Center for Hydro-Meteorological Forecasting
+          took part in the workshop. During the training, the participants engaged in hands-on exercises using the CLEWs
+          integrated framework of Viet Nam to analyze sustainable energy policy scenarios. Most of the participants had
+          taken part in the previous workshops and rapidly caught up with the model updates and related visualization
+          tools. At the end of the workshop, the core group had moved on to designing more complex scenarios using the
+          full Viet Nam CLEWs model, exploring the applications of the methodology and making notes on the scenarios to
+          be formally developed to inform current sustainable development policy concerns.</p>
+
+        <img src="/images/news-events/CLEWsVietNam_2.2.jpg">
+
+        <p> Bilateral meetings were also held with Mr. Tran Thi Hong Minh, who emphasized the importance to have the
+          CLEWs analysis to inform the 10-year Viet Nam strategy; as well as with the Vice President of the NCIF, Dr.
+          Luong, Van Khoi, who remarked the importance of developing an assessment of competing water uses and
+          availability in the Mekong Delta, which has been under environmental pressure and requires urgent attention.
+        </p>
+        <p> A final training will be conducted in the first quarter of 2020 to focus in the development of the specific
+          policy scenarios of interest to the participating institutions and engage in analytical discussions to draft
+          policy notes.</p>
+
+      </article>
+
+      <article>
+        <h2>First CLEWs workshop takes place in Bogor, Indonesia</h2>
+
+        <strong>29 September-2 October 2019</strong>
+
+        <img src="/images/news-events/CLEWSIndonesia2019a.png">
+
+        <p>In response to a request from the Directorate General of New, Renewable Energy, and Energy Conservation
+          (DG-NREEC) of the Ministry of Energy and Mineral Resources UNDP and UNDESA are supporting the Government of
+          Indonesia in adopting the CLEWs framework to support planning and policy formulation. The aim of the analysis
+          is to review the National Energy Policy (RUEN) and analyze strategies to achieve the Nationally Determined
+          Contributions (NDCs) for emission reductions.</p>
+        <p>To this end, a project was set in place to engage in initial model development and deliver the first national
+          training workshop, which took place from 29 of September to 2 of October, in the Bell Swiss Hotel in Bogor
+          Indonesia.</p>
+
+        <img src="/images/news-events/CLEWSIndonesia2019b.png">
+
+        <p>The 4-day workshop on CLEWs of Indonesia was the first of a set of three workshops planned to fully transfer
+          the model and the capacities in its use to inform sustainable development and energy policy. The workshop had
+          the participation of approximately 25 government officials, mainly from the Ministry of Energy and Mineral
+          Resources, and had the support of the UNDP-CO and the UNDP Regional Hub in Bangkok. Policy scenarios were
+          discussed with officials from the Directorate of New and Renewable Energy and Energy Conservation with
+          feedback from the trainees participating in CLEWs. Next steps were defined to follow up on data requirements
+          for the model and the implementation of the next workshop.</p>
+      </article>
+
+      <article>
+        <h2>First CLEWs workshop takes place in Ethiopia</h2>
+
+        <strong>19-23 August 2019</strong>
+
+        <img src="/images/news-events/clewsethiopiaaug2019.jpg">
+
+        <p>DESA, ECA and UNDP conducted the first national Climate, Land, Energy and Water systems (CLEWs) training
+          workshop in Addis Ababa, Ethiopia. The workshop is part of a capacity development project to strengthen
+          national capacity for conducting integrated assessments in support of coherent national sustainable
+          development plans. Eighteen participants from the Ministry of Water, Irrigation and Energy, Central Statistics
+          Agency, Ministry of Agriculture and Livestock, Environment, Forestry and Climate Change Commission, National
+          Development and Planning Commission and the National Meteorology Agency took part in the event.</p>
+      </article>
+
+      <article>
+        <h2>DESA presents progress on the CLEWs model of Cameroon in Yaoundé</h2>
+
+        <strong>8-12 July 2019</strong>
+
+        <img src="/images/news-events/clewscameroonjuly2019.jpg">
+
+        <p>DESA, ECA and UNDP conducted a mission to Yaoundé, Cameroon, to deliver the first national workshop to
+          enhance policy coherence for sustainable development through integrated assessments and institutional
+          strengthening in Cameroon. The mission is part of a capacity development project to support the use of
+          quantitative analysis to inform the national sustainable development strategy. The project focuses on the
+          development, transfer and application of the Climate, Land, Energy and Water systems (CLEWs) integrated
+          assessment methodology.</p>
+        <p>The mission team held bilateral meetings with a range of project stakeholders related to the CLEWs sectors,
+          including the Ministry of Economy, Planning and Regional Development (MINEPAT) which is the main government
+          counterpart to the project. A workshop was held on the 9-10 of July with the objective to introduce the CLEWs
+          framework to participating government institutions. The workshop was opened with a welcome speech by Antonio
+          Pedro – Director of ECA’s Office for Central Africa, followed by opening remarks by Saidou Hamadou of MINEPAT
+          and Thomas Alfstad, UNDESA. Discussions were held on the model structure, data and policy priorities, and
+          spatial focus to the assessment, including the regionalization of the model and main locations of interest for
+          the assessment.</p>
+      </article>
+
+      <article>
+        <h2>DESA conducts mission to Ethiopia to strengthen institutional arrangements for CLEWs modelling project</h2>
+
+        <strong>24-28 June 2019</strong>
+
+        <img src="/images/news-events/clewsethiopiajune2019.jpg">
+
+        <p>The Economic Analysis and Policy Division and the Division for Public Institutions and Digital Government of
+          DESA, conducted a mission to Addis Ababa as part of the implementation of a capacity development project that
+          aims to develop, transfer and apply an integrated Climate, Land, Energy and Water systems (CLEWs) assessment
+          model to support policy coherence in Ethiopia. The project is being implemented at the request of the Minister
+          of Water, Irrigation and Energy (MoWIE) and is jointly implemented by UNDESA, UNDP and UNECA. Several meetings
+          were held with line ministries and government institutions such as the Ministry of Agriculture, Livestock and
+          Resources, the National Planning Commission, the Central Statistical Agency, and key stakeholders from the
+          research community. Policy priorities, institutional engagements, and data availability were discussed with
+          each of the institutions, as well as an update of the project direction and planning. Finally, a meeting with
+          the State Minister of Water and Sanitation was held to brief him on the mission and coordinate a project
+          document describing the way forward for model development, data procurement, interinstitutional collaboration
+          and initial policy priorities of MoWIE to assess using the CLEWs model. </p>
+      </article>
+
+      <article>
+        <h2>2019 Summer School on Modelling Tools for Sustainable Development in Trieste, Italy</h2>
+
+        <strong>10-26 June 2019</strong>
+
+        <img src="/images/news-events/trieste.jpg">
+
+        <p>The third Summer School on Modelling Tools for Sustainable Development was held at ICTP (International Centre
+          for Theoretical Physics) in Trieste, Italy, on 10-26 June 2019. KTH, the World Bank and the OpTIMUS community
+          of modellers organized the training programme, joined by UNDP and UNDESA. </p>
+        <p>Participants from academic, government institutions and international organizations hailed from about 20
+          countries and attended three tracks of training: 1) OSEMoSYS (Open-Source Energy Modelling System) and CLEWS;
+          2) OnSSET (Open Source Spatial Electrification Toolkit), and 3) Data management. A High-level Meeting and
+          Strategic Discourse followed the training program. Participants presented model posters, which they developed
+          during the training, with selected presentations made at the High Level Meeting on 27-28 June.</p>
+        <p>OSEMoSYS is a flexible, open-source tool for energy modelling which has been a high degree of flexibility and
+          is capable of accommodate other “sectors”, such as water and land and of including climate change impacts.
+          There is a growing conversion to this tool by the energy modelling community from developing and developed
+          countries.
+
+        </p>
+      </article>
+
+      <article>
+        <h2>Indonesia requests UNDP and UNDESA modelling assistance to inform the National Renewable Energy Plan</h2>
+
+        <strong>6-10 May 2019</strong>
+
+        <img src="/images/news-events/indonesia1.jpg">
+        <p>
+          <img src="/images/news-events/indonesia2.jpg">
+
+        <p>In response to the expressed interest of the Government of Indonesia to use modelling tools to inform
+          sustainable development policies, the UNDP and UNDESA conducted a scoping mission to Jakarta. The objective of
+          the workshop was to meet with prospective project stakeholders and assess potential scope and aim of a CLEWs
+          capacity development project. Bilateral meetings were held with the Ministry of Energy and Mineral Resources,
+          the Ministry of Planning, Ministry of Environment and Forestry, Ministry of Agriculture, the National Energy
+          Council and the Oil Palm Estate Fund. During the missions the UN team discussed current policy needs and
+          priorities with the participating institutions; their interest in a CLEWs project; the current use of models
+          and quantitative analyses to support policy formulation within the government; and challenges of the country,
+          such as data availability, modelling capacities and inter-institutional coordination. During the meetings, the
+          participating institutions confirmed interest in the project and agreed the planning to reach the Government’s
+          National Renewable Energy Plan was a priority. A CLEWs project will be developed to support the analysis of
+          renewable electricity generation and biofuels.</p>
+      </article>
+
+      <article>
+        <h2>Second workshop on CLEWs modelling in Viet Nam</h2>
+
+        <strong>25-29 March 2019</strong>
+
+        <p>A second national training workshop on the Climate, Land, Energy and Water (CLEWs) integrated analysis
+          framework in Hanoi was conducted in March 2019. Since 2017, UNDESA and UNDP have been implementing capacity
+          development activities in Viet Nam to use the CLEWs methodology as a tool to analyze interconnected aspects of
+          resources management when planning sustainable development strategies. Participants from the Ministry of
+          Investment and Planning, Institute of Strategy and Policy on Natural Resources and Environment, Development
+          Strategy Institute, National Center for Hydro-Meteorological Forecasting, and Ho Chi Minh City took part in
+          the workshop. </p>
+        <p>During the workshop participants were introduced to a CLEWs model specifically tailored to the national
+          circumstances of Viet Nam. The next phase of the project will focus on development of policy analysis using
+          this model to conduct regional analyses focusing on different issues of concern in each region, such as
+          salination of deltas, water stress, erosion, deforestation and nationally determined contributions to GHG
+          emission reductions. </p>
+      </article>
+
+      <article>
+        <h2>Workshop on SDG7 Implementation in Asia and the Pacific</h2>
+
+        <strong>19-21 March 2019</strong>
+
+        <img src="/images/news-events/bangkok.jpg">
+
+        <p>The UNDP Bangkok Regional Hub jointly with KTH (Royal Institute of Technology, Sweden) organized an event on
+          integrated modelling within a larger workshop on SDG7 implementation in Asia Pacific, hosted and organized by
+          ESCAP and UN DESA. The workshop brought together about 90 participants from 17 countries in Asia and CIS,
+          representatives from Africa and Latin America regions, and 20 global and regional organizations, including UN
+          agencies. For the agenda and presentations, please click <a
+            href="https://www.unescap.org/events/workshop-sdg7-implementation-asia-and-pacific">here</a>. Energy,
+          agriculture and land use change contribute more than 90% of greenhouse gas emissions. Action on climate change
+          needs to focus on these areas. At the same time, energy is fundamental for achieving (or not) many sustainable
+          development goals. These natural resource and environmental systems are interdependent in the real world.
+          Further, they also impact our economies and people.</p>
+
+        <p>By modelling energy, water, land use and climate in an integrated framework, analysts have generated insights
+          for integrated policy making. Such integrated models have also been linked with economy-wide models to
+          estimate impacts on GDP, fiscal spending and household incomes. They help generate insights into precisely the
+          kind of complex development challenges that are at the heart of integrated SDG actions and help governments
+          with coherent and more realistic planning.</p>
+
+        <p>The event featured three types of modelling tools developed and/or refined in recent years by a group of
+          experts and academics, with KTH at the lead: (1) OnSSET, a geo-spatial tool being used by the World Bank for
+          least-cost electrification planning; (2) OSeMOSYS, an open-source version of an established energy modelling
+          tool used for assessment and planning of bulk energy investment, and (3) CLEWs, an integrated framework
+          bringing together Climate, Land, Energy and Water models.</p>
+
+        <p>UNDP BPPS and UNDESA have supported capacity development of analysts and policy makers to build and use such
+          models in nine countries in Latin America and Africa so far. The workshop featured national, city-level and
+          sub-regional applications of such integrated models. In Nicaragua, for example, the integrated model helped to
+          assess how does the stated policy goal to increase agricultural and livestock production reconcile with the
+          policy goal of increasing reforestation, how the demand on water from increased use of energy and satisfy
+          growing demand from other sectors – such as growing crops can be addressed. By linking the integrated
+          climate-land-energy-water model results with an economy-wide model, analysts also showed how are the planned
+          investments in energy expected to impact green house gas emissions, GDP and household consumption.</p>
+
+        <p>Other institutions also supported such integrated modelling exercises in cities, of which two were featured
+          at the event: in a very big city (New York) and in a very small city (Oskarsham, Sweden). Other cases profiled
+          included Bolivia (energy and integrated resource modelling assessing various energy scenarios as planned in
+          Bolivia’s National Development Plan by 2030 and how they feed into Intended Nationally Determined
+          Contributions (INDCs) for reduction in green house gas emissions, a commitment made under COP21/ Paris
+          Agreement; and a sub-regional assessment of the Indus River basin spanning Afghanistan, China, Pakistan, and
+          India and providing over 90% of food supply in Pakistan. The event also set the foundation for the
+          Asia-Pacific Energy & Integrated Resource Modelling Platform. </p>
+      </article>
+
+      <article>
+        <h2>Scoping mission takes place in Cameroon</h2>
+
+        <strong>12-15 February 2019</strong>
+
+        <img src="/images/news-events/cameroon.jpg">
+
+        <p>UNDESA, in collaboration with UNDP and UNECA, conducted a scoping mission to Yaoundé, Cameroon to launch a
+          capacity development project to develop, transfer and apply the Climate, Land, Energy and Water systems
+          (CLEWs) modelling tool in support of policy coherence in national sustainable development strategies.</p>
+
+        <p>The mission team held bilateral meetings with a range of potential project stakeholders including the
+          Ministry of Economy, Planning and Regional Development, Ministry of Environment, Nature Protection and
+          Sustainable Development, National Institute for Statistics, Ministry of Energy and Water, National Observatory
+          on Climate Change (ONACC), Ministry of Agriculture and Rural Development, National Institute of Cartography,
+          United Nations Development Program Country Office and the United Nations Assistant Resident Coordinator’s
+          Office. The aim of the meetings was to conduct a situation and needs assessment, assess current institutional
+          arrangements and mechanisms, inform potential counterparts of project scope, assess data availability and
+          define project plans and objectives.</p>
+
+        <p>A workshop was held on the 14th of February 2019 with aim to bring together national stakeholders. The
+          workshop was opened by a representative of the Ministry of Economy, Planning and Regional Development. The UN
+          team introduced the CLEWs methodology, including rationale and objectives, institutional considerations and
+          CLEWs capacity development project structure, timeline and methods. National counterparts presented their
+          relevant activities including analysis. Discussions were held to elaborate on project scope, methods and
+          objectives and to answer questions and concerns from participants.</p>
+
+        <p>The CLEWs analysis will be tailored to inform the 2nd phase of the national development plan in an iterative
+          process with the main counterpart. After which a training program will initiate to transfer the full model.
+          This mission is part of a project with the aim of enhancing policy coherence for the SDGs through integrated
+          assessments and institutional strengthening in Africa.</p>
+      </article>
+
+      <article>
+        <h2>National CLEWs training is finalized in Bolivia</h2>
+
+        <strong>4-8 February 2019</strong>
+
+        <img src="/images/news-events/clewsbolivia.jpg">
+
+        <p>The fourth and final workshop on integrated analysis with the Climate, Land, Energy and Water Systems (CLEWs)
+          took place in La Paz, Bolivia on the week of 4-8 of February 2019. The workshop, organized by UNDESA in
+          collaboration with the Social and Economic Policy Analysis Unit (UDAPE) of the Ministry of Development, the
+          technical expertise of the Royal Institute of Technology in Sweden, and the in-country support of UNDP
+          Bolivia, provided an opportunity for the inter-ministerial analytic team to continue working on data
+          preparation and scenario analysis to inform sustainable development strategies with the CLEWs framework. The
+          team is led by officials from UDAPE, with participation from the Ministry of Environment and Water, the
+          National Electricity Supply Company, and the Ministry of Hydrocarbons.</p>
+
+        <p>During the workshop participants were engaged in developing scenario analysis on key policy issues that were
+          previously identified by Government counterparts; namely: i) bioethanol production from sugarcane to meet
+          mandated volumes for gasoline blending as required under the new biofuels law, while also ensuring sugar
+          production for food security; ii) biodiesel production from soybean as a means to maintain output from the soy
+          sector, which has been negatively impacted by falling exports due to changes in regional preferential tariffs;
+          and iii) analysis of the costs and benefits of large scale investments in multi-purpose dams and reservoirs.
+          The areas of analysis are directly related to Goal 2 Zero Hunger, Goal 6 Clean Water and Sanitation, and Goal
+          7 Affordable and Clean Energy. Indirectly, the policy issues being analyzed also touch on Goal 9 Industry,
+          Innovation and Infrastructure and Goal 12 Responsible Consumption and Production.</p>
+
+        <p>The interministerial team will now prepare policy notes to report on the main findings to inform policymakers
+          at a dissemination conference planned for the second quarter of 2019.</p>
+      </article>
+
+      <article>
+        <h2>Supporting Policy Coherence in Ethiopia using the CLEWs framework</h2>
+
+        <strong>17 January 2019</strong>
+
+        <img src="/images/news-events/clewsethiopiajan2019.jpg">
+
+        <p>African countries face important sustainable development challenges. Food security, energy for all, and
+          facilitating water access remain some of the main concerns to ensure the wellbeing of the population. However,
+          these all rely on natural resources that are highly sensitive to climate change and variability. Addressing
+          these development issues will require quantitative modelling tools and an integrated approach to policymaking,
+          ensuring that overlapping goals, interlinked challenges and potential tradeoffs are considered when planning
+          for mid and long-term policies.</p>
+
+        <p>To support Ethiopia in this endeavor, UNDESA, UNDP and the Economic Commission for Africa (ECA) are
+          implementing a project that will focus on two areas: 1) the development of an integrated climate, land, energy
+          and water (CLEWs) assessment to identify sectoral interlinkages and trade-offs, and assess alternative
+          scenarios to mitigate unwanted policy outcomes; and 2) support policy coherence and institutional
+          strengthening to facilitate coordination among stakeholders in areas related to sustainable development.</p>
+
+        <p>As part of the project, a scoping mission was organized (11-18 January) and a one-day national inception
+          workshop took place in Addis Ababa (17 January). These activities introduced the project’s objectives, the
+          CLEWs framework and the importance of designing coherent policies for sustainable development. The event had
+          the participation of the Minister of Water, irrigation and Electricity, Mr. Seleshi Bekele, and approximately
+          70 participants from various ministries.</p>
+
+        <p>For more information: <a
+            href="https://www.uneca.org/stories/un-entities-support-ethiopia%E2%80%99s-quest-policy-coherence-sdgs">https://www.uneca.org/stories/un-entities-support-ethiopia%E2%80%99s-quest-policy-coherence-sdgs</a>
+        </p>
+
+      </article>
+
+      <article>
+        <h2>UNDESA presented progress in the development of the water for the Central Region of Mexico</h2>
+
+        <strong>21-23 of November 2018</strong>
+
+        <img src="/images/news-events/mexico1.jpg">
+
+        <p>Since 2017, UNDESA and UNDP have been working together with the National Institute of Ecology and Climate
+          Change of Mexico (INECC) to develop a climate, land, energy and water systems integrated assessment in one of
+          the high priority areas of the country: the central region of México. This region represents around 5% of the
+          total land area of the country, concentrates one third of the country’s population and around 35% of national
+          GDP. However, it is also one of the regions with highest water stress, representing a great challenge for
+          sustainable development. With this focus, UNDESA, in collaboration with UNDP and INECC have since worked on an
+          integrated land-water model, starting with the hydrological component for which the Water Evaluation and
+          Planning (WEAP) system was chosen.</p>
+
+        <img src="/images/news-events/mexico2.jpg">
+
+        <p>To present progress of the project, in November 21-23, UNDESA, UNDP and INECC organized a working meeting in
+          Mexico City. During the meeting, the necessary data required to complete the hydrological model, and the
+          necessity to better represent competing water demands such as agriculture, domestic, public, commercial,
+          industrial, livestock and mining were discussed. The working meeting was attended by technical government
+          officials of INECC and CONAGUA, the main administrative body for water management in the country. Feedback was
+          provided by the participants, providing inputs to improve the representation of the hydrological system of the
+          central region of Mexico. Finally, a roadmap was outlined to complete the water analysis component of the
+          project.</p>
+
+        <p><a href="https://photos.app.goo.gl/GJVGEFyUEXsrX8jY6">Additional photos</a></p>
+
+      </article>
+
+      <article>
+        <h2>UNDESA-UNDP complete the third CLEWs workshop in Bolivia</h2>
+
+        <strong>10-14 September 2018</strong>
+
+        <img src="/images/news-events/clewsboliviasept2018.jpg">
+
+        <p>During the week of 10 to 14 September, EAPD conducted the third training workshop on the Climate, Land,
+          Energy and Water Systems (CLEWs) integrated analysis methodology in La Paz, Bolivia. The workshop was
+          organized in collaboration with UNDP and the Social and Economic Policy Analysis Unit (UDAPE). Twenty-three
+          government officials from UDAPE and several ministries such as Planning and Development (MPD), Environment and
+          Water (MMAyA), Rural Development and Land (MDRyT), Energy (ME), Hydrocarbons (MH), the National Meteorology
+          and Hydrology Service (SENAMHI), and state-owned companies such as the transmission system operator (CNDC),
+          the National Electricity Supply Company (ENDE), as well as the state-owned oil and gas company (YPFB),
+          participated, along with members of the UNDP country team. </p>
+
+        <p> During the workshop participants were engaged in hands-on scenario development with the CLEWs framework,
+          exploring key policy areas of interest to the Government, including: i) land use, water use and emission
+          impacts of the new biofuels law; ii) impacts of new multi-purpose dam constructions; iii) agricultural
+          modernization and iv) trade in agricultural products. On the final day, the preliminary results from the
+          scenario modelling exercises were presented and next steps were outlined regarding the necessary updates
+          needed in the model to adequately address and develop the policy scenarios proposed.</p>
+      </article>
+
+      <article>
+        <h2>CLEWs modelling training starts in Ghana</h2>
+
+        <strong>16 May 2018</strong>
+
+        <img src="/images/news-events/956b0aacb34f231e178b81505fd17285.jpg">
+
+        <p>From 7 to 11 May, Ghana’s first training workshop on the CLEWs integrated analysis framework took place in
+          Accra. The workshop was organized by UNDESA, UNDP and the University of Ghana, with participation from the
+          Energy Commission, the Northern Development Authority, the Ghana Irrigation Development Authority and the
+          University of Ghana. Three workshops on the CLEWs modelling framework are planned for the project.</p>
+
+        <p>Participants engaged in hands-on exercises on the energy dimension of CLEWs. Scenario exercises explored key
+          policy areas, namely; i) the vulnerability of hydropower generation to droughts, specifically in relation to
+          climate change; ii) promotion of renewable energy; iii) prospects and viability of waste to energy projects;
+          and iv) energy efficiency. On the final day, the preliminary results from the scenario modelling were
+          presented. Meetings with the UNDP country office and country counterparts were held to plan project
+          implementation.</p>
+      </article>
+
+      <article>
+        <h2>Second national CLEWs training workshop takes place in Bolivia</h2>
+
+        <strong>23 Apr 2018</strong>
+
+        <img src="/images/news-events/10c795b53bb8d2f4f64c5d5af3a9905d.jpg">
+
+        <img src="/images/news-events/b9baa0ede459561f0539ff623400bb2b.jpg">
+
+        <p>From 16 to 20 April, UNDESA and UNDP conducted the second training workshop on CLEWs integrated analysis in
+          La Paz, Bolivia. Twenty-eight government officials from several institutions took part, representing the
+          social, economic and environment sectors. Participants came from the Social and Economic Policy Analysis Unit,
+          the Ministry of Planning and Development, the Ministry of Environment and Water, National Load Dispatch
+          Committee, the National Electricity Supply Company, the National Meteorology and Hydrology Service, the
+          state-owned oil and gas company YPFB, the Ministry of Rural Development and Land, the Ministry of Energy, the
+          Ministry of Hydrocarbons and the UNDP country office.</p>
+
+        <p>Participants conducted hands-on exercises with the CLEWs framework, exploring key policy areas: i) energy
+          exports, ii) biofuels production, iii) water quality and treatment, iv) introduction of gas-to-liquids
+          technology and v) agricultural modernization. On the final day, the preliminary results were presented. Mr.
+          Alvaro Lazo, Sub-Director of Macrosectorial Policy of the Social and Economic Policy Analysis Unit, provided
+          final remarks, highlighting the importance of integrated modelling to inform policies and interministerial
+          engagement to improve analysis of sustainable development strategies.</p>
+
+        <p>The expertise from different institutions enriched the discussions and supported integrated analysis with
+          important insights and perspectives. The process strengthened efforts to build an interministerial analytical
+          team to support policy coherence for sustainable development.</p>
+      </article>
+
+      <article>
+        <h2>Workshop in Bolivia introduces modelling tool for integrated water resources management</h2>
+
+        <strong>13 Apr 2018</strong>
+
+        <img src="/images/news-events/7def39570d2999f2d8a77ff27579e3a7.jpg">
+
+        <p>At the request of the Social and Economic Policy Analysis Unit, a three-day workshop on hydrological
+          modelling using the Water Evaluation and Planning System (WEAP) was held in La Paz from 11 to 13 April. The
+          workshop was organized by UNDESA, UNDP and the Social and Economic Policy Analysis Unit, and co-facilitated by
+          a UNDP consultant along with two specialists from the Ministry of Environment and Water. Ten officials from
+          the Social and Economic Policy Analysis Unit and the National Load Dispatch Committee, who are part of the
+          interinstitutional team of government officials being trained in integrated tools, attended the workshop.</p>
+
+        <p>Integrated water resource management concepts were introduced, complemented with hands-on exercises and model
+          exploration. Participants became familiar with WEAP's interface and functionalities, and with Bolivia's
+          Surface Water Balance model (BHSB) in WEAP, its components, methodology and main results. The BHSB was
+          developed by the Ministry of Environment and Water in collaboration with the Stockholm Environment Institute.
+          It is the main input for water balance data used in the CLEWs model for Bolivia.</p>
+      </article>
+
+      <article>
+        <h2>Assessing national development policies in Mongolia with economy-wide modelling</h2>
+
+        <strong>19 Jan 2018</strong>
+
+        <img src="/images/news-events/d06bffe896ef4f068af576ae2ba16989.jpg">
+
+        <p>UNDP and UNDESA, in coordination with Mongolia’s National Development Agency and the Prime Minister's Office,
+          are implementing a joint capacity development project to strengthen policy analysis skills by using an
+          economy-wide model. The first workshop took place in Ulaanbaatar from 15 to 18 January. The objective was to
+          introduce a simplified model tailored to assess the national development policies of Mongolia, including the
+          National Sustainable Development Vision 2030. The training was attended by 14 government officials from the
+          National Development Agency, Ministry of Finance, Central Bank and Development Bank of Mongolia, among other
+          institutions.</p>
+      </article>
+
+      <article>
+        <h2>UNDESA and UNDP carry out the first CLEWS training in Bolivia</h2>
+
+        <strong>4 Dec 2017</strong>
+
+        <img src="/images/news-events/fb6f6f8ed3e1c742df00d7599f3776c3.jpg">
+
+        <p>From 27 November to 1 December, the first training workshop on CLEWs integrated analysis took place in La
+          Paz, Bolivia. Organized by UNDESA, UNDP and Bolivia’s Social and Economic Policy Analysis Unit, with technical
+          expertise of the Royal Institute of Technology and the International Atomic Energy Agency, the session engaged
+          15 government officials from the Social and Economic Policy Analysis Unit, the National Load Dispatch
+          Committee, the National Meteorology and Hydrology Service, the state-owned oil and gas company YPFB, the
+          Ministry of Energy and the Ministry of Hydrocarbons.</p>
+
+        <p>During the workshop participants took part in hands-on exercises focused on the energy system as a starting
+          point to familiarize themselves with the CLEWs framework. Three key policy areas were explored through the
+          exercises: i) energy exports, ii) the impacts of large new end-users (such as copper mines) on the power
+          system and iii) the climate sensitivity of the power system. On the final day, the preliminary results from
+          scenario-modelling exercises were presented to senior government officials. They discussed specific policy
+          questions involved in analysing cross-sectoral issues in support of sustainable development.</p>
+      </article>
+
+      <article>
+        <h2>Training on energy modelling concludes in Paraguay</h2>
+
+        <strong>6 Nov 2017</strong>
+
+        <img src="/images/news-events/a58eec6faf69f30fde77a61a44e960c7.jpg">
+
+        <p>A third national training workshop on energy systems modelling was held in Asuncion, Paraguay, from 30
+          October to 3 November. The workshop was organized by UNDESA, UNDP and the Secretariat of Planning for Economic
+          and Social Development, with the support of an external expert from the Royal Institute of Technology of
+          Sweden. Participants from the Secretariat of Planning, the Vice-Ministry of Mines and Energy, the National
+          Electricity Administration, the electricity company Itaipu and the Universidad Nacional de Asuncion were in
+          attendance.</p>
+
+        <p>Participants engaged in hands-on exercises to develop scenarios using the energy systems model introduced in
+          earlier workshops. In particular, three key policy areas were explored: i) power sector investment and
+          electricity exports; ii) energy consumption in households, with a focus on reducing dependence on traditional
+          biomass and improving energy efficiency; and iii) transport sector policy, in particular, the expansion of
+          public transport. Side meetings between the various energy sector stakeholders discussed policy issues and how
+          these can be addressed through analysis.</p>
+
+        <p>This was the sixth and final workshop of a capacity development project that has transferred an economy-wide
+          model and an energy systems model to the national Government to support sustainable development policy-making.
+        </p>
+      </article>
+
+      <article>
+        <h2>Second energy systems analysis training conducted in Paraguay</h2>
+
+        <strong>2 Oct 2017</strong>
+
+        <img src="/images/news-events/10e830a62330467fc8254be6a866b2bc.jpg">
+
+        <p>From 18 to 22 September, UNDESA, UNDP and the Secretariat of Planning for Economic and Social Development of
+          Paraguay implemented the second national training workshop on energy systems modelling in Asuncion. The
+          workshop included 13 participants from the Ministry of Planning for Development, the Ministry of Mines and
+          Energy, the National Electricity Administration, the electricity company Itaipu and the Universidad Nacional
+          de Asuncion. Participants engaged in hands-on work and exercises to implement improvements to the energy
+          systems model developed during the first workshop.</p>
+
+        <p>A particular focus was put on the expansion and revision of how the transport sector and biofuel value chains
+          are represented in the model. Various energy sector stakeholders discussed policy issues and how these can be
+          addressed through analysis and modelling. The workshop featured presentations on the Itaipu power station and
+          related bilateral agreements with Brazil, and on the medium-term electricity generation and transmission
+          expansion plan by the National Electricity Administration.</p>
+      </article>
+
+      <article>
+        <h2>UNDESA and UNDP explore scope for capacity development in Cameroon and Zambia</h2>
+
+        <strong>29 Aug 2017</strong>
+
+        <img src="/images/news-events/59850e4ce6bbca9c30f88d1c96397275.jpg">
+
+        <p>Scoping missions to Yaoundé, Cameroon (16 August) and Lusaka, Zambia (24-25 August) were conducted to explore
+          the possibilities for a joint UNDESA-UNDP capacity development program centred on the CLEWs integrated
+          assessment modelling tool.</p>
+
+        <p>In Yaoundé, the mission included discussions with the UNDP country office, the Climate Change Observatory,
+          the Ministry of Environment, the Ministry of Agriculture, the Ministry of Energy and Water and the Ministry of
+          Economy. These institutions expressed keen interest in developing capacity for integrated analysis in the
+          country.</p>
+
+        <p>In Lusaka, the mission found an equally strong interest from the ministries of agriculture, water and energy,
+          and environment and forestry. The UNDP country office offered to coordinate the capacity development project
+          with activities of the UN Joint Programme on Climate Change and Disaster Risk Reduction. The Planning Ministry
+          suggested it could play an important leadership role in the project, based on existing capacity for
+          quantitative modelling and access to data.</p>
+      </article>
+
+      <article>
+        <h2>Energy modelling training begins in Paraguay</h2>
+
+        <strong>14 Aug 2017</strong>
+
+        <img src="/images/news-events/80e57cf073b9c74d7e2d26f6016b3d3c.jpg">
+
+        <p>From 7 to 11 August, UNDESA, UNDP and the Secretariat of Planning for Economic and Social Development of
+          Paraguay implemented the first energy systems model workshop in Asuncion. The workshop included 15 government
+          officials from several ministries and government agencies, such as the Secretariat of Planning, the Ministry
+          of Mines and Energy, and the Ministry of Industry and Trade; from energy entities such as the National
+          Electricity Administration and the electricity company Itaipu; and from the Universidad Nacional de Asuncion.
+        </p>
+
+        <p>Sessions introduced participants to the main underlying concepts of linear programming and energy systems
+          modelling, and featured hands-on sessions where attendants built a simplified energy systems model for
+          Paraguay. The workshop facilitated the exchange of views, data and perspectives on energy issues, and featured
+          two presentations: one on the MESSAGE model for Paraguay by the Vice-Ministry of Mines and Energy and a second
+          on the Paraguay LEAP model by the Universidad Nacional de Asuncion.</p>
+      </article>
+
+      <article>
+        <h2>Economy-wide modelling training concludes in Costa Rica</h2>
+
+        <strong>13 Aug 2017</strong>
+
+        <img src="/images/news-events/860cd4e1dbeb6d279328a66b1794a783.jpg">
+
+        <p>Capacity development activities continued in Costa Rica with the implementation of the 3rd economy-wide
+          modelling workshop in San José from 7 to 10 August. The training focused on the CGE dynamic model. It assessed
+          different shocks to the economy, increases in energy efficiency, greater investments in infrastructure and
+          other simulations. Due to the important insights the model has provided, participants requested another
+          workshop to further explore and confirm the main findings, in preparation for a presentation to medium- and
+          high-level government officials.</p>
+      </article>
+
+      <article>
+        <h2>Scoping mission to Dakar completed</h2>
+
+        <img src="/images/news-events/73448563b4c6bf65399d0258088fc4f7.jpg">
+
+        <p>A scoping mission to Dakar, Senegal assessed prospects for UNDESA and UNDP to help develop capacities in
+          integrated methodologies that support evidence-based sustainable development policies. The mission included
+          meetings with the Office of the Prime Minister, the Ministry of Finance, Economy and Planning at various
+          levels, the Ministry of Energy, the Ministry of Environment and Sustainable Development, the Ministry of
+          Agriculture, the National Agency of Civil Aviation and Meteorology, and the UNDP country office. </p>
+
+        <p>The mission found strong interest from all ministries and specialized departments. There is pre-existing
+          capacity in energy, systems dynamic, water management and climate modelling, which is a valuable input for
+          delivering a country project. No significant capacity on multisectoral integrated modelling was found,
+          however, which is where the proposed project could be of greatest value. The government of Senegal will
+          discuss how to coordinate the project and potential contributions to implementation.</p>
+      </article>
+
+      <article>
+        <h2>Mission to kickstart CLEWs modelling in Mexico</h2>
+
+        <strong>30 July 2017</strong>
+
+        <img src="/images/news-events/842d65a1c8314b2dcd8a053f0575bf1e.jpg">
+
+        <p>From 24 to 28 July, UNDESA and UNDP conducted a mission to Mexico City to launch a CLEWs capacity development
+          project. It is part of a joint UNDESA and UNDP initiative to develop national capacity for using modelling
+          tools to inform sustainable development policies.</p>
+
+        <p>During the mission, preliminary work done by three government experts trained during the CLEWs Trieste Summer
+          School of in June 2017 was presented to senior officials. Several meetings were held with a range of
+          government institutions and stakeholders to present the CLEWs methodology. The mission was successful in
+          ensuring continued high-level support, building potential collaborations with different government offices,
+          and developing clear and detailed plans for model development and capacity-building.</p>
+      </article>
+
+      <article>
+        <h2>Scoping mission to Cameroon is completed to assess the potential of developing a CLEWs model</h2>
+
+        <strong>21-23 July 2017</strong>
+
+        <p>Between 21 and 23 July a scoping mission to Yaoundé, Cameroon was concluded, with discussions with the
+          National Office of Statistics, the Electricity Authority, the Ministry of Scientific Research and Innovation,
+          and UNDP units for environment and governance, as well as with the UN Resident Representative. The mission
+          found there is strong interest and the initial needed capacity in the country to implement a joint UNDESA-UNDP
+          capacity development program centered on the integrated assessment modelling tool for climate change, land,
+          energy and water systems. On 24 and 25 August Eduardo visited for Lusaka, Zambia, for the same purpose. The
+          mission found an equally strong interest in the ministries of Agriculture, Water and Energy, Environment,
+          Forestry and NDC unit. UNDP Country office expressed the interest of coordinating the capacity development
+          project, if implemented, with the capacity development activities contemplated in the UN Joint Program on
+          Climate Change and Disaster Risk Reduction. More detailed discussions with Planning Ministry, given their
+          understanding of modelling and data availability, suggest Planning could play an important leadership role in
+          the project.</p>
+      </article>
+
+      <article>
+        <h2>Mission to start capacity development in CLEWs modelling in Ghana</h2>
+
+        <strong>24 July 2017</strong>
+
+        <p>During the week of 17 to 21 July, UNDESA and IAEA, conducted a workshop and data gathering mission to Accra
+          to start the implementation of a CLEWs capacity development project in Ghana. The mission and workshop are
+          part of the joint initiative of UNDESA and UNDP to promote in-depth capacity development on modelling tools to
+          inform sustainable development policies. The policy relevance and main methodological features of the CLEWs
+          integrated assessment modelling tool were presented along with the preliminary results developed by three
+          government officials trained in the CLEWs Trieste Summer School organized in 12-30 June 2017. The presentation
+          of preliminary results by the government team significantly increased the interest of the government
+          institutions participating in the workshop as it clearly demonstrated the relevance and utility of the tool.
+          The mission was successful in defining the data requirements, strategy of engagement of modelling teams in
+          national institutions, and refining the policy objectives of the project.</p>
+      </article>
+    </section>
+
+    <!--
  !-- <section id="events">
  !--   <h1>Events</h1>
  !-- </section>
   -->
 
-<section id="stories">
-  <h1>Stories</h1>
+    <section id="stories">
+      <h1>Stories</h1>
 
-  <article>
-    <h2>Modelling Sustainable Development in Bolivia</h2>
+      <article>
+        <h2>Modelling Sustainable Development in Bolivia</h2>
 
-    <p>Since 2006, UNDESA and UNDP, have been supporting the Plurinational State of Bolivia to strengthen the analytical capacities of government officials to inform development policies by using modelling tools. Through several capacity development projects, economy-wide and energy systems models have been transferred and a set of policy scenarios have been developed to address key issues of interest to the government.  This collaboration has resulted in several contributions, including publications and policy notes prepared by government officials to disseminate the results and the findings of the modelling assessments.  An inter-ministerial modelling team of government officials has been established that is now capable to undertake policy analysis in response to requests from senior decision-makers.</p>
+        <p>Since 2006, UNDESA and UNDP, have been supporting the Plurinational State of Bolivia to strengthen the
+          analytical capacities of government officials to inform development policies by using modelling tools. Through
+          several capacity development projects, economy-wide and energy systems models have been transferred and a set
+          of policy scenarios have been developed to address key issues of interest to the government. This
+          collaboration has resulted in several contributions, including publications and policy notes prepared by
+          government officials to disseminate the results and the findings of the modelling assessments. An
+          inter-ministerial modelling team of government officials has been established that is now capable to undertake
+          policy analysis in response to requests from senior decision-makers.</p>
 
-    <img src="/images/news-events/c66911d0a9eb905299582ea876c86e61.jpg">
+        <img src="/images/news-events/c66911d0a9eb905299582ea876c86e61.jpg">
 
-    <h3>Bolivia: Impact of capacity development shaping policies in Bolivia</h3>
+        <h3>Bolivia: Impact of capacity development shaping policies in Bolivia</h3>
 
-    <p>The utility of such projects has been highlighted on several occasions. For example, one of the general equilibrium models transferred by UNDESA was useful for informing the 2025 Patriotic Agenda by estimating GDP growth and government budget requirements to finance the implementation of plans and programs. The OSeMOSYS energy model enabled the Unit for Social and Economic Policy Analysis (UDAPE) of the Ministry of Development Planning to contribute analysis to support an assessment of energy sector development to help establish Bolivia's Intended Nationally Determined Contribution (INDC) under the Paris agreement. Furthermore, the Long-range Energy Alternatives Planning system of the country (LEAP) was updated by UNDESA, in collaboration with the Royal Institute of Technology of Sweden (KTH), and UNDP support. As a result of this, a conference was organized to disseminate the results of both energy models to a wide audience, addressing both contributions and limitations to key features of Bolivia’s Plan for Economic and Social Development 2016-2020 (PDES).  Selected policy notes using the energy models were used to inform the Energy Development Plan of the Ministry of Hydrocarbons.</p>
+        <p>The utility of such projects has been highlighted on several occasions. For example, one of the general
+          equilibrium models transferred by UNDESA was useful for informing the 2025 Patriotic Agenda by estimating GDP
+          growth and government budget requirements to finance the implementation of plans and programs. The OSeMOSYS
+          energy model enabled the Unit for Social and Economic Policy Analysis (UDAPE) of the Ministry of Development
+          Planning to contribute analysis to support an assessment of energy sector development to help
+          establish Bolivia's Intended Nationally Determined Contribution (INDC) under the Paris agreement. Furthermore,
+          the Long-range Energy Alternatives Planning system of the country (LEAP) was updated by UNDESA, in
+          collaboration with the Royal Institute of Technology of Sweden (KTH), and UNDP support. As a result of this, a
+          conference was organized to disseminate the results of both energy models to a wide audience, addressing both
+          contributions and limitations to key features of Bolivia’s Plan for Economic and Social Development 2016-2020
+          (PDES). Selected policy notes using the energy models were used to inform the Energy Development Plan of the
+          Ministry of Hydrocarbons.</p>
 
-    <img src="/images/news-events/6356773ae86d853e714a2d97444c7f6b.jpg">
+        <img src="/images/news-events/6356773ae86d853e714a2d97444c7f6b.jpg">
 
-    <p>Likewise, in the Symposium "Promotion of inclusive and responsible public administration for sustainable development" that took place on March 16 and 17, 2016, Mrs. Mirna Mariscal, Subdirector of Macroeconomic Policy of UDAPE, highlighted the importance of capacity development projects to strengthen the technical expertise of the Government in the use and improvement of economic and energy models.</p>
+        <p>Likewise, in the Symposium "Promotion of inclusive and responsible public administration for sustainable
+          development" that took place on March 16 and 17, 2016, Mrs. Mirna Mariscal, Subdirector of Macroeconomic
+          Policy of UDAPE, highlighted the importance of capacity development projects to strengthen the technical
+          expertise of the Government in the use and improvement of economic and energy models.</p>
 
-    <p>The tools that are part of the UNDESA-UNDP portfolio include economy-wide models with modules in energy, health and human development; micro-simulations to assess the impact of policies on poverty dynamics and other household socio-economic indicators; energy systems models and energy planning. Currently, an integrated methodology of climate, land use, energy and water (CLEWs) is under development, which facilitates the analyses of interrelationships between the three dimensions of sustainable development -economic, environmental and social- in policy design and planning.</p>
+        <p>The tools that are part of the UNDESA-UNDP portfolio include economy-wide models with modules in energy,
+          health and human development; micro-simulations to assess the impact of policies on poverty dynamics and other
+          household socio-economic indicators; energy systems models and energy planning. Currently, an integrated
+          methodology of climate, land use, energy and water (CLEWs) is under development, which facilitates the
+          analyses of interrelationships between the three dimensions of sustainable development -economic,
+          environmental and social- in policy design and planning.</p>
 
-    <p>Bolivia’s continuous engagement with the modelling tools and the evidence of their use to inform policies is a good example of the importance of making innovative and tailored models accessible to developing countries.</p>
-  </article>
-</section>
+        <p>Bolivia’s continuous engagement with the modelling tools and the evidence of their use to inform policies is
+          a good example of the importance of making innovative and tailored models accessible to developing countries.
+        </p>
+      </article>
+    </section>
 
-<!-- CONTENT-ENDS -->
-    </main>
+    <!-- CONTENT-ENDS -->
+  </main>
 
-    <footer>
-  <div class="t-col">
-    <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
-  </div>
+  <footer>
+    <div class="t-col">
+      <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+    </div>
 
-  <div class="t-col">
-    <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
-  </div>
+    <div class="t-col">
+      <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+    </div>
 
-  <div class="t-col">
-    <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
-  </div>
+    <div class="t-col">
+      <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+    </div>
 
-  <div class="t-col">
-    <a href="mailto:unmodellingtools@undp.org">Contact</a>
-  </div>
-</footer>
+    <div class="t-col">
+      <a href="mailto:null">Contact</a>
+    </div>
+  </footer>
 
-  </body>
+</body>
+
 </html>
