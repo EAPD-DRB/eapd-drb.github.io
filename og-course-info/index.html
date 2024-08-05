@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="640">
+
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/header.css">
+  <link rel="stylesheet" href="/stylesheets/nav.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css">
+
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+  <title>Training information and links</title>
+</head>
+
+<body>
+  <header>
+    <a id="title" href="/">
+      Rebuilding&nbsp;Better&nbsp;and&nbsp;Greener
+      <br>
+      <div id="using-policy-simulation-tools">Using&nbsp;Policy&nbsp;Simulation&nbsp;Tools</div>
+    </a>
+
+    <div id="logos">
+      <a href="https://www.un.org/development/desa/en/">
+        <img src="/images/logos/undesa.png" alt="UNDESA Logo">
+      </a>
+    </div>
+  </header>
+
+
+  <nav>
+    <input id="toggle" class="no-desktop" type="checkbox">
+
+    <div class="no-desktop">
+      <label for="toggle">
+        <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+          <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </label>
+    </div>
+
+    <a href="/about" class="toggleable">About the Project</a>
+
+    <a href="/og-model" class="toggleable">Overlapping Generations (OG)</a>
+
+    <a href="/clews-model" class="toggleable">Climate Land Energy and Water systems (CLEWs)</a>
+
+    <a href="/wefm-model" class="toggleable">World Economic Forecasting Model (WEFM)</a>
+
+    <a href="/news-events" class="toggleable">News and Events</a>
+
+    <script>
+      (function () {
+        var as = document.querySelectorAll('body > nav a');
+        var path = location.pathname;
+
+        for (var a of as) {
+          var regex = new RegExp(`${a.pathname}`);
+
+          if (!a.href.match('#') && path.match(regex)) {
+            a.classList.add('active');
+            break;
+          }
+        }
+      })();
+    </script>
+  </nav>
+
+
+  <main>
+    <!-- CONTENT-STARTS -->
+    <style>
+      ul {
+        padding-left: 3em;
+      }
+    </style>
+
+    <section class="banner" style="background-image: url(/images/photos/roads-farms.jpg);
+                min-height: 300px
+;">
+      <section>
+        <h1>OG-CORE Training Programme</h1>
+        <p>The OG-CORE training programme aims to build the capacity of government agencies and research institutions to
+          utilize modern quantitative modelling tools in support of sustainable development strategies and
+          decision-making processes. This initiative is designed to address the challenges posed by the COVID-19
+          pandemic and the ongoing war in Ukraine, which threaten to undermine progress in poverty reduction and the
+          achievement of the UN Sustainable Development Goals (SDGs).</p>
+        <p>The course provides a comprehensive introduction to the Core Overlapping Generations
+          Macroeconomy Model (OG-CORE), adapted for each beneficiary country. The training does not require participants
+          to have prior quantitative modelling skills, as it focuses on equipping them with the knowledge to apply these
+          tools effectively in policy-making contexts.</p>
+        <p>The training programme includes a series of modules that introduce the OG-CORE model, offering a
+          non-technical overview of its major components, practical exercises, and examples of policy simulations. </p>
+
+        <ul>
+          <li>Module 1: Initial Training Workshop<br>
+            The initial workshop introduces participants to the foundational aspects of the
+            OG-CORE model and its application to economic policy analysis.</li>
+
+          <li>Module 2: Online, Self-Paced Training<br>
+            The second module is an online, self-paced course designed to ensure that all participants reach the same
+            level of proficiency with Python and develop familiarity with running the OG-CORE model on their computers.
+          </li>
+
+          <li>Module 3: Hands-On Intensive Training Workshop<br>
+            The third module is a hands-on intensive 5-day workshop.
+            This module will focus on
+            running the model effectively, validating the country calibration by analyzing baseline behavior, and using
+            the model to run and study scenarios collaboratively defined by participants. </li>
+        </ul>
+
+        <p>This project is funded by the United Nations Peace and Development Trust Fund and targets research
+          institutions (governmental and non-governmental) responsible for providing analytical support to national
+          policymakers. Participants will benefit from the transfer of modelling tools, documentation, and training,
+          enabling them to develop policy notes and analyses that inform viable policy options and strategies.</p>
+        <p>The expected outcomes of the training programme include enhanced analytical capacity for decision-making and
+          national planning, enabling government ministries, agencies, and other stakeholders to conduct continuous
+          monitoring and analysis of development outcomes. By strengthening the evidence base for policy discourse, the
+          training programme will support the identification and implementation of the most appropriate and effective
+          policy choices for sustainable development.</p>
+
+      </section>
+
+      <section>
+        <h1>Modules</h1>
+
+        <article>
+          <h3>Module 1 - Inception workshop</h3>
+
+          <p>The 2030 Agenda module looks at designing integrated policies to achieve sustainable development and the
+            overall contributions of modelling.</p>
+
+          <ul>
+            <li><a href="/documents/module-1/1. 2030 Agenda - The Learning Guide.pdf">Learning Guide</a></li>
+            <li><a href="/documents/module-1/2. 2030 Agenda - Reader.pdf">Reader</a></li>
+            <li><a href="/documents/module-1/3. 2030 Agenda - Presentation.pptx">Presentation</a></li>
+            <li><a href="/documents/module-1/3.1. 2030 Agenda - Group Discussion.pdf">Group Discussion</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Module 2 - Basic skills</h3>
+
+          <p>This module teaches the basic skills needed to run the OG model and to collaborate online. It teaches
+            skills in Python,
+            GitHub, and other basic tools. It is a self-paced online module with exercises.</p>
+
+          <ul>
+            <li><a href="/documents/module-2/1. CLEWS Country - Learning Guide.pdf">Learning Guide</a></li>
+            <li><a href="/documents/module-2/2. CLEWS Country - Reader.pdf">Reader</a></li>
+            <li><a href="/documents/module-2/3.1 CLEWS Country - Presentation 1.pptx">Presentation 1</a></li>
+            <li><a href="/documents/module-2/3.2 CLEWS Country - Presentation 2.pptx">Presentation 2</a></li>
+            <li><a href="/documents/module-2/3.3 CLEWS Country - Presentation 3.pptx">Presentation 3</a></li>
+            <li><a href="/documents/module-2/3.4 CLEWS Country - Presentation 4.pptx">Presentation 4</a></li>
+            <li><a href="/documents/module-2/3 CLEWS5_Hands-On Session.pdf">Hands-On Session</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Module 3 - Intensive workshop</h3>
+
+          <p>The Intensive workshop is a hands-on 5-day workshop. It builds on the first two modules, so it requires
+            familiarity
+            of the tools and skills presented before. Participants should have a basic ability to run the OG model and
+            navigate
+            the code and GitHub repositories. During this training we will validate the country calibration, run and
+            interpret
+            scenarios effectively, and use the results to answer policy questions.</p>
+
+          <ul>
+            <li><a href="/documents/module-3/1. Global CLEWS - Learning Guide.pdf">Learning Guide</a></li>
+            <li><a href="/documents/module-3/2. Global CLEWS - Reader.pdf">Reader</a></li>
+            <li><a href="/documents/module-3/3.1.a  Global CLEWS - Group Discussion A.pdf">Group Discussion A</a></li>
+            <li><a href="/documents/module-3/3.2.a. Global CLEWS Group - Discussion B.pdf">Discussion B</a></li>
+            <li><a href="/documents/module-3/3.1. GLOBAL CLEWS - Presentation.pptx">Presentation</a></li>
+            <li><a href="/documents/module-3/3.2. Global CLEWS - Hands-On Exercise.pptx">Hands-On Exercise</a></li>
+          </ul>
+        </article>
+
+      </section>
+
+      <!-- CONTENT-ENDS -->
+  </main>
+
+  <footer>
+    <div class="t-col">
+      <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+    </div>
+
+    <div class="t-col">
+      <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+    </div>
+
+    <div class="t-col">
+      <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+    </div>
+
+    <div class="t-col">
+      <a href="mailto:null">Contact</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
